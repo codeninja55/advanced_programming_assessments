@@ -130,4 +130,34 @@ Declare structs and enums according to the following specifications:
    reference and gets student record data for it from the user. Note: Input checking is 
    unnecessary. 
 
-6. ​
+6. Write a function called **PrintStudentDetails()** that is passed a StudentType
+   and prints the student record data on the screen.
+
+7. Write a **main()** function to test the above functions. 
+
+
+
+## 4. Files
+
+Files and I-O streams are explained on page 24 of the C++ Guide. File I-O in C++ can be 
+performed using filestream objects. Use:
+
+```c++
+ifstream fin; // to read from a file 
+ofstream fout; // to write to a file 
+fstream fio; // to read or write to a file (not used here)
+```
+
+Write two functions that can save or load a **StudentType** to or from a file. 
+
+Your functions should have the following prototypes: 
+
+```c++
+void SaveStudentRecord(StudentType &StudentRec);
+void LoadStudentRecord(StudentType &StudentRec); 
+```
+
+Test these functions by writing an appropriate main() function. 
+
+
+
