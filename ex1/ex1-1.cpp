@@ -29,7 +29,7 @@ void print_reverse_string(char msg[]) {
 }
 
 void print_reverse_words(char msg[]) {
-    int counter = 0;
+    int counter=0, start=0, iter=0;
 
     for (int i = 0; i < strlen(msg); i++) {
         if (isspace(msg[i])) {
@@ -42,11 +42,13 @@ void print_reverse_words(char msg[]) {
             cout << "i: " << i << " Word Len: " << word_len << " Counter: " << counter << " |";
 
             char word[word_len];
-            for (int j = 0; j < word_len; j++)
-                word[j] = msg[counter + j];
+            for (int j = 0; j < word_len; j++) {
+                word[j] = msg[iter];
+                iter++;
+            }
 
-            cout << word << endl;
-//            print_reverse_string(word);
+//            cout << word << endl;
+            print_reverse_string(word);
             counter = i;
         }
     }
