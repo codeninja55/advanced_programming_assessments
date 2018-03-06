@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <vector>
 using namespace std;
 
 void print_reverse_string(char msg[]);
@@ -15,7 +16,9 @@ int main(int argc, char *argv[]) {
     cout << "Enter words: ";
     cin.getline(msg, 256);
 
+    cout.clear();
     print_reverse_string(msg);
+    cout << endl;
     print_reverse_words(msg);
     return 0;
 }
@@ -26,14 +29,18 @@ void print_reverse_string(char msg[]) {
     cout << endl;
 }
 
-void print_reverse_words(char msg[]) {
-    int start=0,end=0;
-    do {
-        while(msg[end]!=' ' && msg[end]!='\0')end++; // find end of word
-        for(int i=end-1; i>=start; i--) cout<<msg[i]; // print word in reverse
-        cout << ' ';
-        start = end = end+1; // move to next word
-    } while (end< strlen(msg)); // len is from strlen(words)
+void print_reverse_words(char words[]) {
+    int start=0, end=0;
+    do{
+        while(!isspace(words[end]) && words[end] != '\0') {
+            end++; // find end of word
+            for (int i = end - 1; i >= start; i--) {
+                cout << words[i]; // print word in reverse
+                cout << ' ';
+                start = end = end + 1; // move to next word
+            }
+        }
+    } while (end < strlen(words)); // len is from strlen(words)
     cout<<endl;
 }
 
