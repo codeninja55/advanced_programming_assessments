@@ -39,7 +39,6 @@ struct StudentRecord {
 StudentRecord gRecs[cMaxRecs];
 int gNumRecs = 0;
 
-
 // ============= Private Function Prototypes =========================
 void PrintRecord(int i);
 int FindRecord(long StudentNum);
@@ -91,23 +90,29 @@ void DisplayRecord() { // Displays specified record on screen
 }
 
 void SaveFile() { // Writes array to text data file
-/*
-	open TextFileName
-	if open no good
-		print "Problem opening data file!\n";
-		exit(1);
-	for i=0 to gNumRecs
-		write gRecs[i] StudentNo;
-		write gRecs[i] FirstName;
-		write gRecs[i] LastName;
-		write gRecs[i] NumSubjects;
-		for j=0 to NumSubjects
-			write gRecs[i] Subjects[j] Code;
-			write gRecs[i] Subjects[j] Status;
-			write gRecs[i] Subjects[j] Mark;
-	close textfile
-	print gNumRecs " records saved"
-*/
+    ofstream fout;
+    fout.open(cTextFileName);
+
+    if (!fout.good()) {
+        cout << "[DEBUG] Problem opening data file!\n";
+        exit(1);
+    }
+
+    for (int i = 0; i < gNumRecs; i++) {
+        fout << gRecs[i].StudentNo << endl;
+        fout << gRecs[i].FirstName << " ";
+        fout << gRecs[i].LastName << endl;
+        fout << gRecs[i].NumSubjects << endl;
+        for (int j = 0; j < gRecs[i].NumSubjects; j++) {
+            fout << gRecs[i].Subjects[j].Code << " ";
+            fout << gRecs[i].Subjects[j].Status << " ";
+            fout << gRecs[i].Subjects[j].Mark << endl;
+        }
+        fout << "\n";
+    }
+
+    fout.close();
+    cout << gNumRecs << " records saved" << endl;
 }
 
 void UpdateRecord() { // updates status or mark of specified subject of specified student number
@@ -163,10 +168,12 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
                 subjectFlag++;
         }
 
-        if (subjectFlag == (gRecs[found].NumSubjects - 1)) cout << "\nSubject code not found!\n";
+        if (subjectFlag == (gRecs[found].NumSubjects))
+            cout << "\nSubject code not found!\n";
+        else
+            cout << "Record " << gRecs[found].StudentNo << " Updated.\n";
     }
 }
-
 
 // ============= Private Function Definitions =========================
 

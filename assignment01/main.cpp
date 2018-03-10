@@ -17,7 +17,7 @@ int main(){
 	ReadFile();
 	PrintMenu();
 	do{
-		cout << "Command: ";
+		cout << "\nCommand: ";
 		cin >> Command;
 		Command=tolower(Command);
 		switch (Command)
