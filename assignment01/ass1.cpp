@@ -1,10 +1,13 @@
 /********************************************************************
  * CSCI251 - Ass1
- * <Name - Login>
+ * <Dinh Che - dbac496>
  * ass1.cpp - Contains function definitions for student records database
  ********************************************************************/
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <cstring>
 using namespace std;
 
 // ============== Constants ==========================================
@@ -16,11 +19,15 @@ const int cMaxChars = 30;
 const int cMaxSubjects = 8;
 
 // ============= User Defined types ==================================
+enum StatusType { eEnrolled, eProvisional, eWithdrawn };
 
-enum StatusType{eEnrolled,eProvisional,eWithdrawn};
-struct SubjectType{ char Code[8]; StatusType Status; int Mark;};
+struct SubjectType {
+    char Code[8];
+    StatusType Status;
+    int Mark;
+};
 
-struct StudentRecord{
+struct StudentRecord {
 	long StudentNo;
 	char FirstName[cMaxChars];
 	char LastName[cMaxChars];
@@ -28,62 +35,62 @@ struct StudentRecord{
 	SubjectType Subjects[cMaxSubjects];
 };
 
-
 // ============= Global Data =========================================
-
 StudentRecord gRecs[cMaxRecs];
-int gNumRecs=0;
+int gNumRecs = 0;
 
 
 // ============= Private Function Prototypes =========================
-
 void PrintRecord(int i);
 int FindRecord(long StudentNum);
 
 // ============= Public Function Definitions =========================
 
+void ReadFile() { // Reads data file into array
+    ifstream fin;
+    fin.open(cTextFileName);
+    int statusInt, i = 0;
 
-void ReadFile()
-{// Reads data file into array
-/*
-	open TextFileName
-	if open no good
-		print "Cant find text data file!\n";
-		exit;
-	i = 0
-	read gRecs[i] StudentNo;
-	while not eof
-		read gRecs[i] FirstName;
-		read gRecs[i] LastName;
-		read gRecs[i] NumSubjects;
-		for j=0 to NumSubjects  
-			read gRecs[i] Subjects[j] Code;
-			read gRecs[i] Subjects[j] Status;
-			read gRecs[i] Subjects[j] Mark;
-		inc i
-		read gRecs[i] StudentNo;
+    if(!fin.good()) {
+        cout << "[DEBUG] Cant find text data file!\n" << endl;
+        exit(1);
+    }
 
-	gNumRecs = i
-	close textfile
-	print gNumRecs " records read"
-*/
+    fin >> gRecs[i].StudentNo;
+
+    while(!fin.eof() && i < cMaxRecs) {
+        fin >> gRecs[i].FirstName;
+        fin >> gRecs[i].LastName;
+        fin >> gRecs[i].NumSubjects;
+
+        for (int j = 0; j < gRecs[i].NumSubjects; j++) {
+            fin >> gRecs[i].Subjects[j].Code;
+            fin >> statusInt;
+            gRecs[i].Subjects[j].Status = StatusType(statusInt);
+            fin >> gRecs[i].Subjects[j].Mark;
+        }
+
+        i++;
+        fin >> gRecs[i].StudentNo;
+    }
+
+    gNumRecs = i;
+    fin.close();
+    cout << gNumRecs << " records read.\n" << endl;
 }
 
-void DisplayRecord()
-{// Displays specified record on screen
-/*
-	print "Enter student number: "
-	read student number
-	i = FindRecord(StudentNumber);
-	if record not found
-		print "Record not found"
-	else
-		PrintRecord(i)
-*/
+void DisplayRecord() { // Displays specified record on screen
+    int studentNoInput;
+
+    cout << "Enter student number: ";
+    cin >> studentNoInput;
+    int found = FindRecord(studentNoInput);
+
+    if (found < 0) cout << "/nRecord not found" << endl;
+    else PrintRecord(found);
 }
 
-void SaveFile()
-{// Writes array to text data file
+void SaveFile() { // Writes array to text data file
 /*
 	open TextFileName
 	if open no good
@@ -94,7 +101,7 @@ void SaveFile()
 		write gRecs[i] FirstName;
 		write gRecs[i] LastName;
 		write gRecs[i] NumSubjects;
-		for j=0 to NumSubjects  
+		for j=0 to NumSubjects
 			write gRecs[i] Subjects[j] Code;
 			write gRecs[i] Subjects[j] Status;
 			write gRecs[i] Subjects[j] Mark;
@@ -103,51 +110,92 @@ void SaveFile()
 */
 }
 
-void UpdateRecord()
-{// updates status or mark of specified subject of specified student number
-/*
-	print "Enter student number: "
-	read student number
-	i = FindRecord(StudentNumber);
-	if record not found 
-		print "Record not found!"
-	else
-		display the found record
-		request subject code from user
-		if subject code is found then
-			ask user to select status or mark
-			request new status or mark
-			update status or mark
-		else
-			print "Subject code not found!"
-*/
+void UpdateRecord() { // updates status or mark of specified subject of specified student number
+    long int studentNoInput;
+    char subjectCodeInput[8], editOption[1];
+    cout << "Enter student number: ";
+    cin >> studentNoInput;
+
+    int found = FindRecord(studentNoInput);
+
+    if (!found)
+        cout << "Record not found!\n" << endl;
+    else {
+        PrintRecord(found);
+        cout << "\nEnter subject code i.e. CSCI251: ";
+        cin >> subjectCodeInput;
+
+        int subjectFlag = 0;
+        for (int j = 0; j < gRecs[found].NumSubjects; j++) {
+            if (strcmp(gRecs[found].Subjects[j].Code, subjectCodeInput) == 0) {
+                cout << "Select status or mark (s/m): ";
+                cin >> editOption;
+
+                if (strncmp(editOption, "s", 1) == 0) {
+                    char statusInput[1];
+                    cout << "Select new status\n"
+                         << "e: enrolled\n"
+                         << "p: provisional\n"
+                         << "w: withdrawn\n"
+                         << "Enter new status: ";
+                    cin >> statusInput;
+
+                    if (strncmp(statusInput, "e", 1) == 0) {
+                        gRecs[found].Subjects[j].Status = StatusType(0);
+                        cout << "New status: enrolled" << endl;
+                    } else if (strncmp(statusInput, "p", 1) == 0) {
+                        gRecs[found].Subjects[j].Status = StatusType(1);
+                        cout << "New status: provisional" << endl;
+                    } else if (strncmp(statusInput, "w", 1) == 0) {
+                        gRecs[found].Subjects[j].Status = StatusType(2);
+                        cout << "New status: withdrawn" << endl;
+                    } else
+                        cout << "\nIncorrect choice!\n";
+                } else if (strncmp(editOption, "m", 1) == 0) {
+                    int newMark;
+                    cout << "Enter new mark: ";
+                    cin >> gRecs[found].Subjects[j].Mark;
+                    cout << gRecs[found].Subjects[j].Code << " Mark (new): " << gRecs[found].Subjects[j].Mark;
+                } else {
+                    cout << "\nIncorrect choice!\n\n";
+                }
+            } else
+                subjectFlag++;
+        }
+
+        if (subjectFlag == (gRecs[found].NumSubjects - 1)) cout << "\nSubject code not found!\n";
+    }
 }
 
 
 // ============= Private Function Definitions =========================
 
-void PrintRecord(int i)
-{ // Prints record i on screen
+void PrintRecord(int i) { // Prints record i on screen
+    cout << "\nStudent No. " << gRecs[i].StudentNo << endl
+         << "First Name: " << gRecs[i].FirstName << endl
+         << "Last Name: " << gRecs[i].LastName << endl
+         << "Subjects (" << gRecs[i].NumSubjects << "):" << endl;
 
-/*
-	print gRecs[i] StudentNo;
-	print gRecs[i] FirstName;
-	print gRecs[i] LastName;
-	print gRecs[i] NumSubjects;
-	for j=0 to NumSubjects  
-		print gRecs[i] Subjects[j] Code;
-		print gRecs[i] Subjects[j] Status;
-		print gRecs[i] Subjects[j] Mark;
-*/
+    for (int j = 0; j < gRecs[i].NumSubjects; j++) {
+        cout << "  " << gRecs[i].Subjects[j].Code << " ";
+
+        switch (gRecs[i].Subjects[j].Status) {
+            case eEnrolled:
+                cout << "Enrolled";
+                break;
+            case eProvisional:
+                cout << "Provisional";
+                break;
+            case eWithdrawn:
+                cout << "Withdrawn";
+                break;
+        }
+        cout << " " << gRecs[i].Subjects[j].Mark << endl;
+    }
 }
 
-int FindRecord(long StudentNo)
-{// returns index of matching record or -1 if not found
-/*
-	for i=0 to gRecs
-		if gStudRecs[i] StudentNo == StudentNo
-			return i
-*/
-	return -1
-
+int FindRecord(long StudentNo) { // returns index of matching record or -1 if not found
+    for (int i = 0; i < gNumRecs; i++)
+        if (gRecs[i].StudentNo == StudentNo) return i;
+	return -1;
 }

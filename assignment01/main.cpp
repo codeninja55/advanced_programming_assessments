@@ -1,6 +1,6 @@
 /********************************************************************
  * CSCI251 - Ass1
- * <Name - Login>
+ * <Dinh Che - dbac496>
  * main.cpp - Contains interface for student records database
  ********************************************************************/
 
@@ -14,7 +14,7 @@ void PrintMenu();
 int main(){
 
 	char Command;
-	ReadFile();		
+	ReadFile();
 	PrintMenu();
 	do{
 		cout << "Command: ";
@@ -45,7 +45,7 @@ int main(){
 }
 
 void PrintMenu(){
-	cout << "Commands Available:\n";
+	cout << "\nCommands Available:\n";
 	cout << "  d - Display Record\n";
 	cout << "  u - Update Record\n";
 	cout << "  m - Print Menu\n";
