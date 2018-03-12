@@ -54,6 +54,7 @@ bool WriteTextFile(const char Filename[]);
 bool ReadBinaryFile(const char Filename[]);
 bool WriteBinaryFile(const char Filename[]);
 void WriteBinaryRecord(const char Filename[], int Pos);
+//void ReadBinaryRecord(const char FileName[], int Pos);
 
 // TODO Ask Koren why you cannot use a const char[] when you have a param for char[]
 
@@ -64,6 +65,9 @@ void ReadFile() { // Reads data file into array
         if (ReadTextFile(cTextFileName)) WriteBinaryFile(cBinaryFileName);
         else cout << "[DEBUG] Unable to read both binary and text file." << endl;
     }
+    /* Uncomment to reset the binary file to the original data */
+//    ReadTextFile(cTextFileName);
+//    WriteBinaryFile(cBinaryFileName);
 }
 
 void DisplayRecord() { // Displays specified record on screen
@@ -78,29 +82,30 @@ void DisplayRecord() { // Displays specified record on screen
 }
 
 void SaveFile() { // Writes array to text data file
-    ofstream fout;
-    fout.open(cTextFileName);
-
-    if (!fout.good()) {
-        cout << "[DEBUG] Problem opening data file!\n";
-        exit(1);
-    }
-
-    for (int i = 0; i < gNumRecs; i++) {
-        fout << gRecs[i].StudentNo << endl;
-        fout << gRecs[i].FirstName << " ";
-        fout << gRecs[i].LastName << endl;
-        fout << gRecs[i].NumSubjects << endl;
-        for (int j = 0; j < gRecs[i].NumSubjects; j++) {
-            fout << gRecs[i].Subjects[j].Code << " ";
-            fout << gRecs[i].Subjects[j].Status << " ";
-            fout << gRecs[i].Subjects[j].Mark << endl;
+    if (!WriteBinaryFile(cBinaryFileName)) {  // Attempt to write to binary file first.
+        ofstream fout;
+        fout.open(cTextFileName);
+        if (!fout.good()) {
+            cout << "[DEBUG] Problem opening data file!\n";
+            exit(1);
         }
-        fout << "\n";
-    }
 
-    fout.close();
-    cout << gNumRecs << " records saved" << endl;
+        for (int i = 0; i < gNumRecs; i++) {
+            fout << gRecs[i].StudentNo << endl;
+            fout << gRecs[i].FirstName << " ";
+            fout << gRecs[i].LastName << endl;
+            fout << gRecs[i].NumSubjects << endl;
+            for (int j = 0; j < gRecs[i].NumSubjects; j++) {
+                fout << gRecs[i].Subjects[j].Code << " ";
+                fout << gRecs[i].Subjects[j].Status << " ";
+                fout << gRecs[i].Subjects[j].Mark << endl;
+            }
+            fout << "\n";
+        }
+
+        fout.close();
+        cout << gNumRecs << " records saved." << endl;
+    }
 }
 
 void UpdateRecord() { // updates status or mark of specified subject of specified student number
@@ -118,7 +123,7 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
         cout << "\nEnter subject code i.e. CSCI251: ";
         cin >> subjectCodeInput;
 
-        int subjectFlag = 0;
+        bool subjectFlag = false;
         for (int j = 0; j < gRecs[found].NumSubjects; j++) {
             if (strcmp(gRecs[found].Subjects[j].Code, subjectCodeInput) == 0) {
                 cout << "Select status or mark (s/m): ";
@@ -152,14 +157,17 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
                 } else {
                     cout << "\nIncorrect choice!\n\n";
                 }
-            } else
-                subjectFlag++;
+                subjectFlag = true;
+            }
         }
 
-        if (subjectFlag == (gRecs[found].NumSubjects))
+        if (!subjectFlag)
             cout << "\nSubject code not found!\n";
-        else
-            cout << "Record " << gRecs[found].StudentNo << " Updated.\n";
+        else {
+            /* If it's zero, the seekp(will start from zero) */
+            WriteBinaryRecord(cBinaryFileName, found);
+            cout << "\nRecord " << gRecs[found].StudentNo << " Updated.\n";
+        }
     }
 }
 
@@ -261,34 +269,44 @@ bool WriteTextFile(const char Filename[]) { //writes text data from gRecs[] to f
 }
 
 bool ReadBinaryFile(const char Filename[]) { //reads binary data from file to gRecs[] array
-    ifstream fin(Filename, ios::in | ios::binary);
+    streampos fileSize;
+    ifstream fin(Filename, ios::in | ios::binary | ios::ate);  // Opening file with cursor placed at end
 
     if (!fin.good()) {
         cout << "[DEBUG] Binary file cannot be opened for reading" << endl;
         return false;
     }
 
-    fin.seekg(0, ios::beg);  // Move pointer to beginning of file
-    int i = 0;
+    /*int i = 0;
     while(!fin.eof()) {
         fin.read((char*)&gRecs[i], sizeof(StudentRecord));
         i++;
-    }
+    }*/
 
+    // fin.seekg(0, ios::end);  // Not used because starting the stream at the end when opening
+    fileSize = fin.tellg();
+    cout << fileSize / sizeof(StudentRecord) << " records read from binary file." << endl;
+
+    fin.seekg(0, ios::beg);
+    fin.read((char*)&gNumRecs, sizeof(gNumRecs));  // Read and move cursor past the number of records stored (i.e. 4 bytes)
+    /* Because an array is also sequential in memory,
+     * we can use a larger size of read to input the whole array */
+    while(!fin.eof())
+        fin.read((char*)&gRecs, 100*sizeof(StudentRecord));
     fin.close();
+
     return true;
 }
 
 bool WriteBinaryFile(const char Filename[]) { //writes binary data from gRecs[] to file
     ofstream fout(Filename, ios::binary);
-    const char space = ' ';
-    const char newline = '\n';
 
     if (!fout.good()) {
         cout << "[DEBUG] Binary file cannot be opened for writing" << endl;
         return false;
     }
 
+    fout.write((char*)&gNumRecs, sizeof(gNumRecs));
 
     for (int i = 0; i < gNumRecs; i++) {
         /*fout.write((char*)&gRecs[i].StudentNo, sizeof(gRecs[i].StudentNo));
@@ -301,34 +319,72 @@ bool WriteBinaryFile(const char Filename[]) { //writes binary data from gRecs[] 
             fout.write((char*)&gRecs[i].Subjects[j].Status, sizeof(gRecs[i].Subjects[j].Status));
             fout.write((char*)&gRecs[i].Subjects[j].Mark, sizeof(gRecs[i].Subjects[j].Mark));
         }*/
-
         fout.write((char*)&gRecs[i], sizeof(gRecs[i]));
     }
 
     fout.close();
-    cout << "[DEBUG] Binary write completed." << endl;
+    cout << gNumRecs << " records saved to binary file." << endl;
 
     return true;
 }
 
-void WriteBinaryRecord(char Filename[], int Pos) {
+void WriteBinaryRecord(const char Filename[], int Pos) {
     /* This function only writes one record */
     // open the binary file (named in global cBinaryFileName)
-    /*ifstream fout(Filename, ios::in | ios::binary);
-    const char space = ' ';
-    const char newline = '\n';
+    ofstream fout(Filename, ios::in | ios::binary);
 
     if (!fout.good()) {
         cout << "[DEBUG] Binary file cannot be opened for writing" << endl;
         exit(1);
-    }*/
+    }
 
-    // seek() to the appropriate record at Pos
+    // seekp() past the first 4 bytes which stores gNumRecs
+    fout.seekp(sizeof(gNumRecs), ios::beg);
 
+    // seekp() to the appropriate record at Pos
+    fout.seekp(Pos*sizeof(gRecs[Pos]), ios::cur);
 
+    PrintRecord(Pos);
     // write the record to the binary file
+    fout.write((char*)&gRecs[Pos], sizeof(StudentRecord));
 
     // close the file
-//    fout.close();
-
+    fout.close();
+//    ReadBinaryRecord(cBinaryFileName, Pos);
 }
+
+// This function is for testing reading a specific StudentRecord from the binary file.
+/*void ReadBinaryRecord(const char FileName[], int Pos) {
+    ifstream fin(FileName, ios::binary);
+    StudentRecord tempStudent;
+
+    fin.seekg(sizeof(gNumRecs), ios::beg);
+    fin.seekg(Pos*sizeof(gRecs[Pos]), ios::cur);
+    fin.read((char*)&tempStudent, sizeof(tempStudent));
+
+    cout << "\nTemp Student Binary Read" << endl;
+
+    cout << "\nStudent No. " << tempStudent.StudentNo << endl
+         << "First Name: " << tempStudent.FirstName << endl
+         << "Last Name: " << tempStudent.LastName << endl
+         << "Subjects (" << tempStudent.NumSubjects << "):" << endl;
+
+    for (int j = 0; j < tempStudent.NumSubjects; j++) {
+        cout << "  " << tempStudent.Subjects[j].Code << " ";
+
+        switch (tempStudent.Subjects[j].Status) {
+            case eEnrolled:
+                cout << "Enrolled";
+                break;
+            case eProvisional:
+                cout << "Provisional";
+                break;
+            case eWithdrawn:
+                cout << "Withdrawn";
+                break;
+        }
+        cout << " " << tempStudent.Subjects[j].Mark << endl;
+    }
+
+    fin.close();
+}*/
