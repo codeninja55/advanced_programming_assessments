@@ -60,7 +60,8 @@ void WriteBinaryRecord(const char Filename[], int Pos);
 
 // ============= Public Function Definitions =========================
 
-void ReadFile() { // Reads data file into array
+// Reads data file into array
+void ReadFile() {
     if(!ReadBinaryFile(cBinaryFileName)) {
         if (ReadTextFile(cTextFileName)) WriteBinaryFile(cBinaryFileName);
         else cout << "[DEBUG] Unable to read both binary and text file." << endl;
@@ -70,7 +71,8 @@ void ReadFile() { // Reads data file into array
 //    WriteBinaryFile(cBinaryFileName);
 }
 
-void DisplayRecord() { // Displays specified record on screen
+// Displays specified record on screen
+void DisplayRecord() {
     int studentNoInput;
 
     cout << "Enter student number: ";
@@ -81,7 +83,8 @@ void DisplayRecord() { // Displays specified record on screen
     else PrintRecord(found);
 }
 
-void SaveFile() { // Writes array to text data file
+// Writes array to text data file
+void SaveFile() {
     if (!WriteBinaryFile(cBinaryFileName)) {  // Attempt to write to binary file first.
         ofstream fout;
         fout.open(cTextFileName);
@@ -90,6 +93,7 @@ void SaveFile() { // Writes array to text data file
             exit(1);
         }
 
+        // Loops through and passes each struct attr to the file stream
         for (int i = 0; i < gNumRecs; i++) {
             fout << gRecs[i].StudentNo << endl;
             fout << gRecs[i].FirstName << " ";
@@ -108,7 +112,8 @@ void SaveFile() { // Writes array to text data file
     }
 }
 
-void UpdateRecord() { // updates status or mark of specified subject of specified student number
+// Updates status or mark of specified subject of specified student number
+void UpdateRecord() {
     long int studentNoInput;
     char subjectCodeInput[8], editOption[1];
     cout << "Enter student number: ";
@@ -123,7 +128,9 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
         cout << "\nEnter subject code i.e. CSCI251: ";
         cin >> subjectCodeInput;
 
-        bool subjectFlag = false;
+        bool subjectFoundFlag = false;
+
+        // Loops through the students subject structs to find the one requested
         for (int j = 0; j < gRecs[found].NumSubjects; j++) {
             if (strcmp(gRecs[found].Subjects[j].Code, subjectCodeInput) == 0) {
                 cout << "Select status or mark (s/m): ";
@@ -138,6 +145,7 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
                          << "Enter new status: ";
                     cin >> statusInput;
 
+                    // Conditional to print the new status based on input
                     if (strncmp(statusInput, "e", 1) == 0) {
                         gRecs[found].Subjects[j].Status = StatusType(0);
                         cout << "New status: enrolled" << endl;
@@ -149,7 +157,7 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
                         cout << "New status: withdrawn" << endl;
                     } else
                         cout << "\nIncorrect choice!\n";
-                } else if (strncmp(editOption, "m", 1) == 0) {
+                } else if (strncmp(editOption, "m", 1) == 0) {  // Allows update of mark
                     int newMark;
                     cout << "Enter new mark: ";
                     cin >> gRecs[found].Subjects[j].Mark;
@@ -157,11 +165,11 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
                 } else {
                     cout << "\nIncorrect choice!\n\n";
                 }
-                subjectFlag = true;
+                subjectFoundFlag = true;
             }
         }
 
-        if (!subjectFlag)
+        if (!subjectFoundFlag)  // Checks if the subject was found and prints message to user
             cout << "\nSubject code not found!\n";
         else {
             /* If it's zero, the seekp(will start from zero) */
@@ -173,7 +181,8 @@ void UpdateRecord() { // updates status or mark of specified subject of specifie
 
 // ============= Private Function Definitions =========================
 
-void PrintRecord(int i) { // Prints record i on screen
+// Prints record i on screen
+void PrintRecord(int i) {
     cout << "\nStudent No. " << gRecs[i].StudentNo << endl
          << "First Name: " << gRecs[i].FirstName << endl
          << "Last Name: " << gRecs[i].LastName << endl
@@ -197,13 +206,15 @@ void PrintRecord(int i) { // Prints record i on screen
     }
 }
 
-int FindRecord(long StudentNo) { // returns index of matching record or -1 if not found
+// Returns index of matching record or -1 if not found
+int FindRecord(long StudentNo) {
     for (int i = 0; i < gNumRecs; i++)
         if (gRecs[i].StudentNo == StudentNo) return i;
 	return -1;
 }
 
-bool ReadTextFile(const char Filename[]) { //reads text data from file to gRecs[] array
+// Reads text data from file to gRecs[] array
+bool ReadTextFile(const char Filename[]) {
     ifstream fin;
     fin.open(Filename);
     int statusInt, i = 0;
@@ -237,13 +248,11 @@ bool ReadTextFile(const char Filename[]) { //reads text data from file to gRecs[
 
     /*for (int i = 0; i < gNumRecs; i++)
         PrintRecord(i);*/
-//    PrintRecord(0);
-//    PrintRecord(1);
-
     return true;
 }
 
-bool WriteTextFile(const char Filename[]) { //writes text data from gRecs[] to file
+// Writes text data from gRecs[] to file
+bool WriteTextFile(const char Filename[]) {
     ofstream fout(Filename);
 
     if (!fout.good()) {
@@ -268,7 +277,8 @@ bool WriteTextFile(const char Filename[]) { //writes text data from gRecs[] to f
     return true;
 }
 
-bool ReadBinaryFile(const char Filename[]) { //reads binary data from file to gRecs[] array
+// Reads binary data from file to gRecs[] array
+bool ReadBinaryFile(const char Filename[]) {
     streampos fileSize;
     ifstream fin(Filename, ios::in | ios::binary | ios::ate);  // Opening file with cursor placed at end
 
@@ -292,13 +302,14 @@ bool ReadBinaryFile(const char Filename[]) { //reads binary data from file to gR
     /* Because an array is also sequential in memory,
      * we can use a larger size of read to input the whole array */
     while(!fin.eof())
-        fin.read((char*)&gRecs, 100*sizeof(StudentRecord));
+        fin.read((char*)&gRecs, cMaxRecs*sizeof(StudentRecord));
     fin.close();
 
     return true;
 }
 
-bool WriteBinaryFile(const char Filename[]) { //writes binary data from gRecs[] to file
+// Writes binary data from gRecs[] to file
+bool WriteBinaryFile(const char Filename[]) {
     ofstream fout(Filename, ios::binary);
 
     if (!fout.good()) {
@@ -308,19 +319,21 @@ bool WriteBinaryFile(const char Filename[]) { //writes binary data from gRecs[] 
 
     fout.write((char*)&gNumRecs, sizeof(gNumRecs));
 
-    for (int i = 0; i < gNumRecs; i++) {
-        /*fout.write((char*)&gRecs[i].StudentNo, sizeof(gRecs[i].StudentNo));
-        fout.write(gRecs[i].FirstName, sizeof(gRecs[i].FirstName));
-        fout.write(gRecs[i].LastName, sizeof(gRecs[i].LastName));
-        fout.write((char*)&gRecs[i].NumSubjects, sizeof(gRecs[i].NumSubjects));
-
-        for (int j = 0; j < gRecs[i].NumSubjects; j++) {
-            fout.write(gRecs[i].Subjects[j].Code, sizeof(gRecs[i].Subjects[j].Code));
-            fout.write((char*)&gRecs[i].Subjects[j].Status, sizeof(gRecs[i].Subjects[j].Status));
-            fout.write((char*)&gRecs[i].Subjects[j].Mark, sizeof(gRecs[i].Subjects[j].Mark));
-        }*/
-        fout.write((char*)&gRecs[i], sizeof(gRecs[i]));
-    }
+    // Much less efficient
+    // for (int i = 0; i < gNumRecs; i++) {
+    //     /*fout.write((char*)&gRecs[i].StudentNo, sizeof(gRecs[i].StudentNo));
+    //     fout.write(gRecs[i].FirstName, sizeof(gRecs[i].FirstName));
+    //     fout.write(gRecs[i].LastName, sizeof(gRecs[i].LastName));
+    //     fout.write((char*)&gRecs[i].NumSubjects, sizeof(gRecs[i].NumSubjects));
+    //
+    //     for (int j = 0; j < gRecs[i].NumSubjects; j++) {
+    //         fout.write(gRecs[i].Subjects[j].Code, sizeof(gRecs[i].Subjects[j].Code));
+    //         fout.write((char*)&gRecs[i].Subjects[j].Status, sizeof(gRecs[i].Subjects[j].Status));
+    //         fout.write((char*)&gRecs[i].Subjects[j].Mark, sizeof(gRecs[i].Subjects[j].Mark));
+    //     }*/
+    //     fout.write((char*)&gRecs[i], sizeof(gRecs[i]));
+    // }
+    fout.write((char*)&gRecs, sizeof(StudentRecord) * gNumRecs);
 
     fout.close();
     cout << gNumRecs << " records saved to binary file." << endl;
@@ -328,8 +341,8 @@ bool WriteBinaryFile(const char Filename[]) { //writes binary data from gRecs[] 
     return true;
 }
 
+// Writes one gRecs[] record to the binary file
 void WriteBinaryRecord(const char Filename[], int Pos) {
-    /* This function only writes one record */
     // open the binary file (named in global cBinaryFileName)
     ofstream fout(Filename, ios::in | ios::binary);
 

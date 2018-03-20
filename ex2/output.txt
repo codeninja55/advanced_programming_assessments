@@ -1,0 +1,35 @@
+Begin test
+
+500 records were read
+
+Karen Collins
+2 Peace Ave Blacktown VIC
+22902971
+
+Display next record: y
+John Jim
+62 Connell St Cheryville TAS
+27737088
+
+Display next record: n
+
+Enter phone number to find: 22902971
+Karen Collins
+2 Peace Ave Blacktown VIC
+22902971
+
+Head record removed:
+Karen Collins
+2 Peace Ave Blacktown VIC
+22902971
+
+Enter phone number to find: 22902971
+Record not found
+
+List deleted
+
+End test
+
+--------------------------------
+Process exited after 54.71 seconds with return value 0
+Press any key to continue . . .
