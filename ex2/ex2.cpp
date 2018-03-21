@@ -27,8 +27,8 @@ struct PhoneRecord
 
 const char cDataFilename[] = "phone.txt";
 PhoneRecord *Head; // head of linked list
-const unsigned int cNameSz = 20;
-const unsigned int cAddrSz = 40;
+//const unsigned int cNameSz = 20;
+//const unsigned int cAddrSz = 40;
 
 // ============= Function Prototypes =========================
 
@@ -41,6 +41,7 @@ void DisplayAllRecs();
 void DisplayRec(PhoneRecord *Rec);
 void DeleteList();
 void *ec_malloc(unsigned int);
+char *dynamic_str_mem(ifstream &fin);
 
 // ============= Main Function ================================
 
@@ -74,8 +75,6 @@ void ReadFile()
 	long phoneNo;
 
     char *name, *address;
-    name = (char *)ec_malloc(cNameSz);
-    address = (char *)ec_malloc(cAddrSz);
 
 	if (!fin.good()) {
 		cout<<"[DEBUG]: Unable to read file"<<endl;
@@ -87,35 +86,37 @@ void ReadFile()
         if (fin.fail()) break;
         fin.clear();
         fin.ignore(256, '\n');
+
+        name = (char *)dynamic_str_mem(fin);
+        address = (char *)dynamic_str_mem(fin);
         // fin.getline(name, cNameSz, '\n');
-
-        // Dynamic Char Memory
-        int i=0;
-        char c;
-        char *str;
-        str = (char *)ec_malloc(sizeof(char));
-
-        while((c = fin.get()) != '\n') {
-            // cout<<strlen(str)<<endl;
-            realloc(str, (sizeof(str) + sizeof(char)));
-            str[i++] = c;
-            // cout<<str<<endl;
-        }
-
-        str[i] = '\0';
-        name = str;
-
-        fin.getline(address, cAddrSz, '\n');
+        // fin.getline(address, cAddrSz, '\n');
 
         AddRecord(phoneNo, name, address);
-
-        // free(str);
         recCount++;
 	}
+
     fin.close();
     cout<<recCount<<" records were read."<<endl;
-    free(name);
-    free(address);
+}
+
+// Reads one char at a time to dynamically create char[] from ifstream reference
+char *dynamic_str_mem(ifstream &fin)
+{ // Dynamic Char Read with C
+    int i=0;
+    char c;
+    char *str;
+    str = (char *)ec_malloc(sizeof(char));  // Allocate only enough for 1 char
+
+    while((c = fin.get()) != '\n') {  // Read the char one at a time
+        // Re-allocate memory by extending str by 1 char
+        realloc(str, (strlen(str) + sizeof(char)));
+        str[i++] = c;
+    }
+
+    fin.clear();
+    str[i] = '\0';  // Append \0 to end of cstring array
+    return str;
 }
 
 // Adds record to tail of linked list
@@ -125,14 +126,11 @@ void AddRecord(long phoneNo, char *name, char *address)
     tmpPhoneRecPtr = new PhoneRecord;
 
     tmpPhoneRecPtr->PhoneNo = phoneNo;
-    // Dynamic Memory Alloc for name and address arrays
+    // Dynamic Memory Alloc (C++) for name and address arrays
     tmpPhoneRecPtr->Name = new char[strlen(name)+1];  // Additional char bit for \0
     tmpPhoneRecPtr->Address = new char[strlen(address)+1];
     strcpy(tmpPhoneRecPtr->Name, name);
     strcpy(tmpPhoneRecPtr->Address, address);
-    // cout<<strlen(tmpName)+1<<endl;
-    // cout<<strlen(tmpAddress)+1<<endl;
-
 
     tmpPhoneRecPtr->Next = NULL;
     if (Head == NULL)
