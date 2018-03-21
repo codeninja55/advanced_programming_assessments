@@ -1,3 +1,0 @@
-/home/codeninja/Dropbox/uow_csci251/development/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/codeninja/Dropbox/uow_csci251/development/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/codeninja/Dropbox/uow_csci251/development/cmake-build-debug/CMakeFiles/development.dir
