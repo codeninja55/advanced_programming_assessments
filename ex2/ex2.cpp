@@ -7,6 +7,8 @@
 #include <fstream>
 #include <cstring>
 #include <stdlib.h>
+#include <stdio.h>
+#include "ec_malloc.h"
 using namespace std;
 
 // ============= User Defined types ==================================
@@ -23,37 +25,36 @@ struct PhoneRecord
 
 // ============= Global Data =========================================
 
-const char cDataFileName[] = "phone.txt";
+const char cDataFilename[] = "phone.txt";
 PhoneRecord *Head; // head of linked list
 const unsigned int cNameSz = 20;
-const unsigned int cAddressSz = 40;
-
+const unsigned int cAddrSz = 40;
 
 // ============= Function Prototypes =========================
 
 void Initialise();
 void ReadFile();
-void AddRecord(long PhoneNo,char *Name,char *Address);
+void AddRecord(long phoneNo,char *name,char *address);
 void FindRecord();
 void RemoveRecord();
 void DisplayAllRecs();
 void DisplayRec(PhoneRecord *Rec);
 void DeleteList();
-
+void *ec_malloc(unsigned int);
 
 // ============= Main Function ================================
 
 int main()
 {
-	cout << "Begin test" << endl << endl;
-	Initialise();
+    cout<<"Begin test"<<endl<<endl;
+    Initialise();
 	ReadFile();
     DisplayAllRecs();
 	FindRecord();
 	RemoveRecord();
 	FindRecord();
 	DeleteList();
-	cout << endl << "End test" << endl;
+	cout<<endl<<"End test"<<endl;
 	return 0;
 }
 
@@ -68,15 +69,16 @@ void Initialise()
 // Reads data file into linked list
 void ReadFile()
 {
-	ifstream fin(cDataFileName);
-    int recCount = 0;
-    long phoneNo;
+	ifstream fin(cDataFilename);
+    int recCount=0;
+	long phoneNo;
+
     char *name, *address;
-    name = new char[cNameSz];
-    address = new char[cAddressSz];
+    name = (char *)ec_malloc(cNameSz);
+    address = (char *)ec_malloc(cAddrSz);
 
 	if (!fin.good()) {
-		cout << "[DEBUG]: Unable to read file" << endl;
+		cout<<"[DEBUG]: Unable to read file"<<endl;
 		exit(1);
 	}
 
@@ -84,35 +86,53 @@ void ReadFile()
         fin >> phoneNo;
         if (fin.fail()) break;
         fin.clear();
-        fin.ignore(256,'\n');
-        fin.getline(name, cNameSz, '\n');
-        fin.getline(address, cAddressSz, '\n');
+        fin.ignore(256, '\n');
+        // fin.getline(name, cNameSz, '\n');
+
+        // Dynamic Char Memory
+        int i=0;
+        char c;
+        char *str;
+        str = (char *)ec_malloc(sizeof(char));
+
+        while((c = fin.get()) != '\n') {
+            // cout<<strlen(str)<<endl;
+            realloc(str, (sizeof(str) + sizeof(char)));
+            str[i++] = c;
+            // cout<<str<<endl;
+        }
+
+        str[i] = '\0';
+        name = str;
+
+        fin.getline(address, cAddrSz, '\n');
+
         AddRecord(phoneNo, name, address);
+
+        // free(str);
         recCount++;
-    }
+	}
     fin.close();
     cout<<recCount<<" records were read."<<endl;
+    free(name);
+    free(address);
 }
 
 // Adds record to tail of linked list
-void AddRecord(long PhoneNo, char *Name, char *Address)
+void AddRecord(long phoneNo, char *name, char *address)
 {
     PhoneRecord *tmpPhoneRecPtr;
     tmpPhoneRecPtr = new PhoneRecord;
 
-    // Dynamic Memory Alloc for Name and Address arrays
-    char *tmpName, *tmpAddress;
-//    tmpName = Name;
-//    tmpAddress = Address;
-    tmpName = new char[cNameSz];
-    tmpAddress = new char[cAddressSz];
+    tmpPhoneRecPtr->PhoneNo = phoneNo;
+    // Dynamic Memory Alloc for name and address arrays
+    tmpPhoneRecPtr->Name = new char[strlen(name)+1];  // Additional char bit for \0
+    tmpPhoneRecPtr->Address = new char[strlen(address)+1];
+    strcpy(tmpPhoneRecPtr->Name, name);
+    strcpy(tmpPhoneRecPtr->Address, address);
+    // cout<<strlen(tmpName)+1<<endl;
+    // cout<<strlen(tmpAddress)+1<<endl;
 
-    strcpy(tmpName, Name);
-    strcpy(tmpAddress, Address);
-
-    tmpPhoneRecPtr->PhoneNo = PhoneNo;
-    tmpPhoneRecPtr->Name = tmpName;
-    tmpPhoneRecPtr->Address = tmpAddress;
 
     tmpPhoneRecPtr->Next = NULL;
     if (Head == NULL)
@@ -124,9 +144,6 @@ void AddRecord(long PhoneNo, char *Name, char *Address)
             tmpCurrentPtr = tmpCurrentPtr->Next;
         tmpCurrentPtr->Next = tmpPhoneRecPtr;
     }
-
-//    delete tmpName;
-//    delete tmpAddress;
 }
 
 // Finds record in linked list and displays it
@@ -156,7 +173,7 @@ void RemoveRecord()
 {
     if (Head == NULL) cout << "[DEBUG] List is empty";
     else {
-        cout << "\nHead record removed." << endl;
+        cout <<"\nHead record removed."<< endl;
         DisplayRec(Head);
         PhoneRecord *tmpPhoneRecPtr;
         tmpPhoneRecPtr = Head;
@@ -169,14 +186,14 @@ void RemoveRecord()
 void DisplayAllRecs()
 {
 	char Ans;
-	PhoneRecord *Crnt;
-	Crnt = Head;
-	while(Crnt!=NULL) {
-		DisplayRec(Crnt);
+	PhoneRecord *tmpCurrentPtr;
+	tmpCurrentPtr = Head;
+	while (tmpCurrentPtr != NULL) {
+		DisplayRec(tmpCurrentPtr);
 		cout<<"\nDisplay next record: ";
 		cin>>Ans;
 		if(Ans=='n') break;
-		Crnt=Crnt->Next;
+		tmpCurrentPtr = tmpCurrentPtr->Next;
 	}
 	cout << endl;
 }
@@ -186,21 +203,19 @@ void DisplayRec(PhoneRecord *RecPtr)
 {
 	cout<<'\n'<<RecPtr->Name<<endl;
 	cout<<RecPtr->Address<<endl;
-	cout<<RecPtr->PhoneNo<<endl;
-	cout<<endl;
+	cout<<RecPtr->PhoneNo<<endl<<endl;
 }
 
 // Deletes memory in list
 void DeleteList()
 {
-    PhoneRecord *tmpCurrent;
-    tmpCurrent = Head;
+    PhoneRecord *tmpCurrentPtr;
+    tmpCurrentPtr = Head;
     while (Head != NULL) {
         PhoneRecord *tmpPhoneRecPtr;
         tmpPhoneRecPtr = Head;
         Head = Head->Next;
         delete tmpPhoneRecPtr;
     }
-    cout << "List deleted." << endl;
+    cout<<"List deleted."<< endl;
 }
-
