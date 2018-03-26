@@ -85,7 +85,7 @@ void ReadFile()
         fin >> phoneNo;
         if (fin.fail()) break;
         fin.clear();
-        fin.ignore(256, '\n');
+        fin.ignore(1, '\n');  // ASK KOREN!
 
         name = (char *)dynamic_str_mem(fin);
         address = (char *)dynamic_str_mem(fin);
