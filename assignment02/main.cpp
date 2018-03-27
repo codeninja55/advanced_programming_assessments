@@ -11,7 +11,22 @@ using namespace std;
 
 int main()
 {
-	CardSet CardSet1(12), CardSet2(12), CardSet3, CardSet4, CardSet5, CardSet6;
+	CardSet CardSet1(104), CardSet2(12), CardSet3, CardSet4, CardSet5, CardSet6;
+
+	// cout<<"[TEST] 1%: "<<1%13<<endl;
+	// cout<<"[TEST] 1/: "<<1/13<<endl;
+	// cout<<"[TEST] 2%: "<<2%13<<endl;
+	// cout<<"[TEST] 2/: "<<2/13<<endl;
+	// cout<<"[TEST] 12%: "<<12%13<<endl;
+	// cout<<"[TEST] 12/: "<<12/13<<endl;
+	// cout<<"[TEST] 13%: "<<13%13<<endl;
+	// cout<<"[TEST] 13/: "<<13/13<<endl;
+	// cout<<"[TEST] 14%: "<<114%13<<endl;
+	// cout<<"[TEST] 14/: "<<14/13<<endl;
+	// cout<<"[TEST] 52%: "<<52%13<<endl;
+	// cout<<"[TEST] 52/: "<<52/13<<endl;
+	// cout<<"[TEST] 53%: "<<53%13<<endl;
+	// cout<<"[TEST] 53/: "<<53/13<<endl;
 
 	cout << "BEGINNING OF CARDSET TESTS . . .  "<< endl << endl;
 
@@ -76,4 +91,3 @@ int main()
 	cout << ". . . END OF TESTS"<< endl;
 	return 0;
 }
-

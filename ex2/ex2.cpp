@@ -157,13 +157,6 @@ void FindRecord()
         tmpCurrent = tmpCurrent->Next;
     if (tmpCurrent != NULL) DisplayRec(tmpCurrent);
     else cout<<"Record not found!"<<endl;
-    /*while (tmpCurrent != NULL) {
-        cout<<"\nDisplay next record [y/N]: ";
-        cin>>ans;
-        if(ans=='n' || ans=='\n' || ans==' ') break;
-        tmpCurrent=tmpCurrent->Next;
-        if(ans='y') DisplayRec(tmpCurrent);
-    }*/
 }
 
 // Removes record from head of linked list
@@ -213,6 +206,8 @@ void DeleteList()
         PhoneRecord *tmpPhoneRecPtr;
         tmpPhoneRecPtr = Head;
         Head = Head->Next;
+        delete [] tmpPhoneRecPtr->Name;
+        delete [] tmpPhoneRecPtr->Address;
         delete tmpPhoneRecPtr;
     }
     cout<<"List deleted."<< endl;

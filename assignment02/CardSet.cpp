@@ -4,6 +4,8 @@
 ***********************************************/
 
 #include <iostream>
+#include <stdlib.h>
+#include <math.h>
 #include "CardSet.h"
 using namespace std;
 
@@ -23,26 +25,39 @@ CardSet::CardSet()
  * needed, but never exceeding the number 51. For example if a set of 104 cards is requested,
  * the array would contain 0 to 51 twice.
  */
-CardSet::CardSet(int i)
+CardSet::CardSet(int n)
 {
-    nCards = i;
+    Card = new int[n];
+    nCards = n;
 
-    if (nCards > 51) {}
-    //if (nCards <= 51) Card = Card[nCards];
-    //else if ((nCards % 51) != 0) Card = Card[nCards];
-    //else Card = Card[nCards % 51];
+    if (n <= 52)
+        for (int i=0; i<n; i++) Card[i] = i;
+    else {
+        int idx = 0;
+        // For loop for 1st set of 52
+        for (int j=0; j < floor(n/52); j++) {
+            for (int k=0; k<52; k++) Card[idx++] = k;
+        }
 
+        // For loop for rest of cards with modulo
+        for (int l=0; l < n%52; l++) Card[idx++] = l;
+    }
 }
 
 /*************** DESTRUCTOR ***************/
 
 CardSet::~CardSet()
 {
-
+    if (!(Card == NULL)); delete [] Card;
 }
 
 /*************** MUTATORS ***************/
 
+// Function to add a card to the current hand.
+void CardSet::AddCard(int i)
+{
+    // Dynamic realloc of array
+}
 
 /*************** ACCESSORS ***************/
 // This accessor function should return the value of nCards.
@@ -54,9 +69,14 @@ int CardSet::Size() const
 // This accessor function, uses PrintCard to print the contents of the set, five cards to a line.
 void CardSet::Print() const
 {
+    // cout<<"[DEBUG]"<<endl;
+    // for (int j=0; j < nCards; j++) cout<<Card[j]<<" ";
+    // cout<<endl;
+
     for (int i=0; i < nCards; i++) {
-        if ((i%5)==0) cout<<endl;
-        PrintCard(i);
+        if ((i%5) == 0) cout<<endl;
+        if (i>=52) PrintCard(i%52);
+        else PrintCard(i);
     }
     cout<<endl<<endl;
 }
@@ -66,7 +86,7 @@ void CardSet::Print() const
 void CardSet::PrintCard(int c) const
 {
 	int Rank = c%13;
-	int Suit = c/13;
+	int Suit = c/13;  // For the 2nd deck, this is out of arr range
 	const char NameSuit[5] = "SCDH";
 	const char NameRank[14] = "23456789XJQKA";
 	cout<<NameRank[Rank]<<NameSuit[Suit]<<" ";
