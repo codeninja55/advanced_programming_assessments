@@ -30,33 +30,80 @@ CardSet::CardSet(int n)
     Card = new int[n];
     nCards = n;
 
-    if (n <= 52)
-        for (int i=0; i<n; i++) Card[i] = i;
-    else {
-        int idx = 0;
-        // For loop for 1st set of 52
-        for (int j=0; j < floor(n/52); j++) {
-            for (int k=0; k<52; k++) Card[idx++] = k;
-        }
-
-        // For loop for rest of cards with modulo
-        for (int l=0; l < n%52; l++) Card[idx++] = l;
-    }
+    for (int i=0; i < n; i++) Card[i] = (i>=52) ? i%52 : i;
 }
 
 /*************** DESTRUCTOR ***************/
-
 CardSet::~CardSet()
 {
-    if (!(Card == NULL)); delete [] Card;
+    int *Tmp;
+    if (!Card == NULL) {
+        Tmp = Card;
+        Card = NULL;
+        delete [] Tmp;
+    }
 }
 
 /*************** MUTATORS ***************/
+
+/* This function should return the value of the first card in the set,
+ * located in the 0th element of the array. The function should then create fresh memory,
+ * transfer the rest of the set to this new memory, and then delete the old memory.
+ * That is, this class never has any vacant space in it. The array is always the same
+ * size as the number of actual cards it holds. If the set is empty, this function
+ * should print an error message and terminate the program.
+*/
+int CardSet::Deal()
+{
+    if (Card == NULL) return -1;
+    int *CardPtr;
+    int DealCard = Card[0];
+    int *NewCards = new int[--nCards];
+    for (int i=1; i <= nCards; i++) NewCards[i-1] = Card[i];
+    delete [] Card;
+    Card = NewCards;
+    return DealCard;
+}
+
+/* This function deals two hands into the two CardSet arguments passed.
+ * The number of cards to be placed into each hand is the first argument.
+ * The cards should be removed from the current set one at a time, placing
+ * the cards into alternate hands. For example. if the current set held 2S,
+ * 3S, 4S, 5S, 6S, 7S (the integers 0 to 5) and we had to deal 3 cards,
+ * then the two hands would get 2S, 4S, 6S (integers 0, 2, 4) and 3S, 5S,
+ * 7S (1, 3, 5) respectively. The two hands may already have cards in them,
+ * and the additional cards will require new memory. Do not create new memory
+ * more often than is required. Remember that the current set has to be reduced
+ * in size as well. If there aren't enough cards in the current set to perform
+ * the deal, print an error message and terminate.
+*/
+void Deal(int n, CardSet& Set1, CardSet& Set2)
+{
+
+}
+
+void Deal(int n, CardSet& Set1, CardSet& Set2, CardSet& Set3, CardSet& Set4)
+{
+
+}
 
 // Function to add a card to the current hand.
 void CardSet::AddCard(int i)
 {
     // Dynamic realloc of array
+    int *NewCards = new int[++nCards];
+    NewCards[0] = i;
+    for (int j=0; j < nCards; j++) NewCards[++i] = Card[j];
+    delete [] Card;
+    Card = NewCards;
+}
+
+/* This function takes the current set and the set provided as an argument and makes the
+ * current set contain all the cards from the two sets, with cards alternating from each
+ * set as far as possible. After this function the argument set will be empty. */
+void MergeShuffle(CardSet& Set)
+{
+
 }
 
 /*************** ACCESSORS ***************/
@@ -66,17 +113,22 @@ int CardSet::Size() const
     return nCards;
 }
 
-// This accessor function, uses PrintCard to print the contents of the set, five cards to a line.
+bool CardSet::IsEmpty() const
+{
+    return (Card == NULL);
+}
+
+// This accessor function, uses PrintCard to print the contents of the set,
+// five cards to a line.
 void CardSet::Print() const
 {
-    // cout<<"[DEBUG]"<<endl;
-    // for (int j=0; j < nCards; j++) cout<<Card[j]<<" ";
-    // cout<<endl;
+    cout<<"[DEBUG]"<<endl;
+    for (int j=0; j < nCards; j++) cout<<Card[j]<<" ";
+    cout<<endl;
 
     for (int i=0; i < nCards; i++) {
         if ((i%5) == 0) cout<<endl;
-        if (i>=52) PrintCard(i%52);
-        else PrintCard(i);
+        PrintCard(Card[i]);
     }
     cout<<endl<<endl;
 }
@@ -86,7 +138,7 @@ void CardSet::Print() const
 void CardSet::PrintCard(int c) const
 {
 	int Rank = c%13;
-	int Suit = c/13;  // For the 2nd deck, this is out of arr range
+	int Suit = c/13;
 	const char NameSuit[5] = "SCDH";
 	const char NameRank[14] = "23456789XJQKA";
 	cout<<NameRank[Rank]<<NameSuit[Suit]<<" ";
