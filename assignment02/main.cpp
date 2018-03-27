@@ -13,21 +13,6 @@ int main()
 {
 	CardSet CardSet1(104), CardSet2(12), CardSet3, CardSet4, CardSet5, CardSet6;
 
-	// cout<<"[TEST] 1%: "<<1%13<<endl;
-	// cout<<"[TEST] 1/: "<<1/13<<endl;
-	// cout<<"[TEST] 2%: "<<2%13<<endl;
-	// cout<<"[TEST] 2/: "<<2/13<<endl;
-	// cout<<"[TEST] 12%: "<<12%13<<endl;
-	// cout<<"[TEST] 12/: "<<12/13<<endl;
-	// cout<<"[TEST] 13%: "<<13%13<<endl;
-	// cout<<"[TEST] 13/: "<<13/13<<endl;
-	// cout<<"[TEST] 14%: "<<114%13<<endl;
-	// cout<<"[TEST] 14/: "<<14/13<<endl;
-	// cout<<"[TEST] 52%: "<<52%13<<endl;
-	// cout<<"[TEST] 52/: "<<52/13<<endl;
-	// cout<<"[TEST] 53%: "<<53%13<<endl;
-	// cout<<"[TEST] 53/: "<<53/13<<endl;
-
 	cout << "BEGINNING OF CARDSET TESTS . . .  "<< endl << endl;
 
 	cout << "Test 1: Constructors:" << endl;
@@ -38,18 +23,19 @@ int main()
 	cout << "Printout of CardSet2:" << endl;
 	CardSet2.Print();
 	cout << endl;
-/*
+
 	cout << "Test 2: Adding and removing cards to CardSet1: "<< endl;
 	int Card = CardSet1.Deal();
 	cout << "Dealing 1 card: "<< Card << endl;
 	cout << "CardSet1 Size: " << CardSet1.Size() << endl;
+    CardSet1.Print();
 	cout << "Adding card "<< Card << endl;
 	CardSet1.AddCard(Card);
 	cout << "CardSet1 Size: " << CardSet1.Size() << endl;
 	cout << "Printout of CardSet1:" << endl;
 	CardSet1.Print();
 	cout << endl;
-
+/*
 	cout << "Test 3: Normal Shuffle: "<< endl;
 	CardSet1.Shuffle();
 	cout << "Printout of shuffled CardSet1:" << endl;
