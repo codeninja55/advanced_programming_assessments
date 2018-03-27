@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <stdlib.h>
-#include <math.h>
+#include <time.h>
 #include "CardSet.h"
 using namespace std;
 
@@ -37,7 +37,7 @@ CardSet::CardSet(int n)
 CardSet::~CardSet()
 {
     int *Tmp;
-    if (!Card == NULL) {
+    if (Card != NULL) {
         Tmp = Card;
         Card = NULL;
         delete [] Tmp;
@@ -46,16 +46,14 @@ CardSet::~CardSet()
 
 /*************** MUTATORS ***************/
 
-/* This function should return the value of the first card in the set,
- * located in the 0th element of the array. The function should then create fresh memory,
- * transfer the rest of the set to this new memory, and then delete the old memory.
- * That is, this class never has any vacant space in it. The array is always the same
- * size as the number of actual cards it holds. If the set is empty, this function
- * should print an error message and terminate the program.
-*/
+// Returns the first card in the set and reallocates memory for a new set with 1 less card.
 int CardSet::Deal()
 {
-    if (Card == NULL) return -1;
+    if (Card == NULL) {
+        cout<<"[ERROR] The Card set is empty."<<endl;
+        exit(1);
+    }
+
     int *CardPtr;
     int DealCard = Card[0];
     int *NewCards = new int[--nCards];
@@ -98,6 +96,24 @@ void CardSet::AddCard(int i)
     Card = NewCards;
 }
 
+/* This function rearranges the cards in the set in a random manner. There are many ways of doing this.
+ * The simplest method follows this algorithm: */
+void CardSet::Shuffle()
+{
+    int j=0;
+    for (int i=0; i < nCards; i++) {
+        srand(time(NULL));
+        j = rand() % nCards + 1;
+        cout<<j<<" "<<endl;
+        if (i != j) {
+            int TmpCard;
+            TmpCard = Card[i];
+            Card[i] = Card[j];
+            Card[j] = TmpCard;
+        }
+    }
+}
+
 /* This function takes the current set and the set provided as an argument and makes the
  * current set contain all the cards from the two sets, with cards alternating from each
  * set as far as possible. After this function the argument set will be empty. */
@@ -123,7 +139,10 @@ bool CardSet::IsEmpty() const
 void CardSet::Print() const
 {
     cout<<"[DEBUG]"<<endl;
-    for (int j=0; j < nCards; j++) cout<<Card[j]<<" ";
+    for (int j=0; j < nCards; j++) {
+        if ((j%10) == 0) cout<<endl;
+        cout<<Card[j]<<" ";
+    }
     cout<<endl;
 
     for (int i=0; i < nCards; i++) {
