@@ -35,13 +35,14 @@ int main()
 	cout << "Printout of CardSet1:" << endl;
 	CardSet1.Print();
 	cout << endl;
-/*
+
 	cout << "Test 3: Normal Shuffle: "<< endl;
 	CardSet1.Shuffle();
 	cout << "Printout of shuffled CardSet1:" << endl;
 	CardSet1.Print();
 	cout << endl;
 
+/*
 	cout << "Test 4: Merge Shuffle: "<< endl;
 	cout << "Printout of CardSet2:" << endl;
 	CardSet2.Print();
