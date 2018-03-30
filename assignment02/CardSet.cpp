@@ -28,13 +28,34 @@ CardSet::CardSet(int n)
 /*************** DESTRUCTOR ***************/
 CardSet::~CardSet()
 {
-    int *Tmp;
     if (Card != NULL) {
+        int *Tmp;
         Tmp = Card;
         Card = NULL;
         delete [] Tmp;
     }
 }
+
+/*************** COPY CONSTRUCTOR & ASSIGNMENT OVERLOAD***************/
+/*CardSet::CardSet(const CardSet& other)
+{
+    if (!other.IsEmpty()) {
+        nCards = other.Size();
+        for (int i=0; i < nCards; i++) Card[i] = other.Deal();
+    }
+}
+
+CardSet& CardSet::operator=(const CardSet& other) const
+{
+    if (this != other) {
+        delete [] Card;
+        nCards = other.Size();
+        //int *localCardSet = new int[nCards];
+        for (int i=0; i < nCards; i++) Card[i] = other.Deal();
+        //for (int i=0; i < nCards; i++) localCardSet[i] = other.Deal();
+    }
+    return *this;
+}*/
 
 /*************** MUTATORS ***************/
 
@@ -51,7 +72,10 @@ int CardSet::Deal()
     int *newCardSet = new int[nCards];
     int j=0;
     for (int i=1; i <= nCards; i++) newCardSet[j++] = Card[i];
-    delete [] Card;
+
+    int *Tmp;
+    Tmp = Card;
+    delete [] Tmp;
     Card = newCardSet;
     return DealCard;
 }
@@ -78,7 +102,18 @@ void CardSet::Deal(int n, CardSet& Set1, CardSet& Set2)
 
 void CardSet::Deal(int n, CardSet& Set1, CardSet& Set2, CardSet& Set3, CardSet& Set4)
 {
+    if (CardSet::Size() < n*4) {
+        cout<<"[ERROR] There is not enough cards in the current set to deal "
+            <<n<<" cards."<<endl;
+        exit(1);
+    }
 
+    for (int i=0; i < n; i++) {
+        Set1.AddCard(Deal());
+        Set2.AddCard(Deal());
+        Set3.AddCard(Deal());
+        Set4.AddCard(Deal());
+    }
 }
 
 /* Function to add a card to the current hand. */
@@ -90,10 +125,12 @@ void CardSet::AddCard(int newCard)
     newCardSet[0] = newCard;
 
     int i=1;
-    if (nCards > 1)
+    if (CardSet::Size() > 1)
         for (int j=0; j < nCards; j++) newCardSet[i++] = Card[j];
 
-    delete [] Card;
+    int *Tmp;
+    Tmp = Card;
+    delete [] Tmp;
     Card = newCardSet;
 }
 
@@ -130,7 +167,9 @@ void CardSet::MergeShuffle(CardSet& Set)
     }
 
     nCards = newCardSz;
-    delete [] Card;
+    int *Tmp;
+    Tmp = Card;
+    delete [] Tmp;
     Card = newCardSet;
 }
 
