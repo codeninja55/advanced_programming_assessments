@@ -13,20 +13,10 @@ const bool debug = true;
 
 /*************** CONSTRUCTORS ***************/
 
-/* Default constructor sets up 0 cards */
-CardSet::CardSet()
-{
-    nCards = 0;
-    Card = NULL;
-}
+/* Default constructor sets up 0 cards using member initialization. */
+CardSet::CardSet() : nCards(0), Card(NULL) { }
 
 /* Initialising constructor */
-/*
- * It should set up a set of cards, where the number of cards is the argument passed.
- * The array Card should be filled with cards starting from 0, up to the number of cards
- * needed, but never exceeding the number 51. For example if a set of 104 cards is requested,
- * the array would contain 0 to 51 twice.
- */
 CardSet::CardSet(int n)
 {
     Card = new int[n];
