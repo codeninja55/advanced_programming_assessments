@@ -8,24 +8,29 @@
 #include "CardSet.h"
 using namespace std;
 
+const bool debug = true;
 
 int main()
 {
-	CardSet CardSet1(104), CardSet2(12), CardSet3, CardSet4, CardSet5, CardSet6;
+	CardSet CardSet1(24), CardSet2(12), CardSet3, CardSet4, CardSet5, CardSet6;
 
 	cout << "BEGINNING OF CARDSET TESTS . . .  "<< endl << endl;
+    if(debug) cout << "=================================================="<<endl;
 
-	cout << "Test 1: Constructors:" << endl;
-	cout << "CardSet1 Size: " << CardSet1.Size() << endl;
-	cout << "CardSet3 Size: " << CardSet3.Size() << endl;
-	cout << "Printout of CardSet1:" << endl;
-	CardSet1.Print();
-	cout << "Printout of CardSet2:" << endl;
-	CardSet2.Print();
-	cout << endl;
+    cout << "Test 1: Constructors:" << endl;
+    if(debug) cout << "=================================================="<<endl;
+    cout << "CardSet1 Size: " << CardSet1.Size() << endl;
+    cout << "CardSet3 Size: " << CardSet3.Size() << endl;
+    cout << "Printout of CardSet1:" << endl;
+    CardSet1.Print();
+    cout << "Printout of CardSet2:" << endl;
+    CardSet2.Print();
+    cout << endl;
+    if(debug) cout << "=================================================="<<endl;
 
-	cout << "Test 2: Adding and removing cards to CardSet1: "<< endl;
-	int Card = CardSet1.Deal();
+    cout << "Test 2: Adding and removing cards to CardSet1: "<< endl;
+    if(debug) cout << "=================================================="<<endl;
+    int Card = CardSet1.Deal();
 	cout << "Dealing 1 card: "<< Card << endl;
 	cout << "CardSet1 Size: " << CardSet1.Size() << endl;
     CardSet1.Print();
@@ -35,21 +40,32 @@ int main()
 	cout << "Printout of CardSet1:" << endl;
 	CardSet1.Print();
 	cout << endl;
+    if(debug) cout << "=================================================="<<endl;
 
-	cout << "Test 3: Normal Shuffle: "<< endl;
-	CardSet1.Shuffle();
-	cout << "Printout of shuffled CardSet1:" << endl;
-	CardSet1.Print();
-	cout << endl;
+    /*cout << "Test 3: Normal Shuffle: "<< endl;
+    if(debug) cout << "=================================================="<<endl;
+    CardSet1.Shuffle();
+    cout << "Printout of shuffled CardSet1:" << endl;
+    CardSet1.Print();
+    cout << endl;
+    if(debug) cout << "=================================================="<<endl;*/
+
+    cout << "Test 4: Merge Shuffle: "<< endl;
+    if(debug) cout << "=================================================="<<endl;
+    cout << "Printout of CardSet1:" << endl;
+    cout << "CardSet1 Size: " << CardSet1.Size() << endl;
+    CardSet1.Print();
+    cout << "Printout of CardSet2:" << endl;
+    cout << "CardSet2 Size: " << CardSet2.Size() << endl;
+    CardSet2.Print();
+    CardSet1.MergeShuffle(CardSet2);
+    cout << "Printout of CardSet1 Merged with CardSet2:" << endl;
+    cout << "CardSet1 Size: " << CardSet1.Size() << endl;
+    CardSet1.Print();
+    cout << endl;
+    if(debug) cout << "=================================================="<<endl;
 
 /*
-	cout << "Test 4: Merge Shuffle: "<< endl;
-	cout << "Printout of CardSet2:" << endl;
-	CardSet2.Print();
-	CardSet1.MergeShuffle(CardSet2);
-	cout << "Printout of CardSet1 Merged with CardSet2:" << endl;
-	CardSet1.Print();
-	cout << endl;
 
 	cout << "Test 5: Dealing 3 Cards from CardSet1 into CardSet3 and CardSet4: " << endl;
 	CardSet1.Deal(3,CardSet3,CardSet4);
