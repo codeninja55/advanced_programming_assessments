@@ -46,53 +46,55 @@ int CardSet::Deal()
         exit(1);
     }
 
-    int *CardPtr;
     int DealCard = Card[0];
-    int *NewCards = new int[--nCards];
-    for (int i=1; i <= nCards; i++) NewCards[i-1] = Card[i];
+    nCards -= 1;
+    int *newCardSet = new int[nCards];
+    int j=0;
+    for (int i=1; i <= nCards; i++) newCardSet[j++] = Card[i];
     delete [] Card;
-    Card = NewCards;
+    Card = newCardSet;
     return DealCard;
 }
 
 /* This function deals two hands into the two CardSet arguments passed.
- * The number of cards to be placed into each hand is the first argument.
  * The cards should be removed from the current set one at a time, placing
- * the cards into alternate hands. For example. if the current set held 2S,
- * 3S, 4S, 5S, 6S, 7S (the integers 0 to 5) and we had to deal 3 cards,
- * then the two hands would get 2S, 4S, 6S (integers 0, 2, 4) and 3S, 5S,
- * 7S (1, 3, 5) respectively. The two hands may already have cards in them,
- * and the additional cards will require new memory. Do not create new memory
- * more often than is required. Remember that the current set has to be reduced
- * in size as well. If there aren't enough cards in the current set to perform
- * the deal, print an error message and terminate.
-*/
-void Deal(int n, CardSet& Set1, CardSet& Set2)
+ * the cards into alternate hands. */
+void CardSet::Deal(int n, CardSet& Set1, CardSet& Set2)
+{
+    // If there aren't enough cards in the current set for the deal,
+    // print an error message and terminate.
+    if (CardSet::Size() < n*2) {
+        cout<<"[ERROR] There is not enough cards in the current set to deal "
+            <<n<<" cards."<<endl;
+        exit(1);
+    }
+
+    // Cards removed from current set one at a time, placed into alternate hands
+    for (int i=0; i < n; i++) {
+        Set1.AddCard(CardSet::Deal());
+        Set2.AddCard(CardSet::Deal());
+    }
+}
+
+void CardSet::Deal(int n, CardSet& Set1, CardSet& Set2, CardSet& Set3, CardSet& Set4)
 {
 
 }
 
-void Deal(int n, CardSet& Set1, CardSet& Set2, CardSet& Set3, CardSet& Set4)
+/* Function to add a card to the current hand. */
+void CardSet::AddCard(int newCard)
 {
-
-}
-
-// Function to add a card to the current hand.
-void CardSet::AddCard(int i)
-{
-    int k=0;
     nCards += 1;
     // Dynamic realloc of array
-    int *NewCards = new int[nCards];
-    NewCards[0] = i;
+    int *newCardSet = new int[nCards];
+    newCardSet[0] = newCard;
 
-    for (int j=0; j < nCards; j++) NewCards[k++] = Card[j];
+    int i=1;
+    if (nCards > 1)
+        for (int j=0; j < nCards; j++) newCardSet[i++] = Card[j];
 
-    int *TmpPtr;
-    TmpPtr = Card;
-    Card = NULL;
-    delete [] TmpPtr;
-    Card = NewCards;
+    delete [] Card;
+    Card = newCardSet;
 }
 
 /* This function rearranges the cards in the set in a random manner. */
@@ -115,23 +117,21 @@ void CardSet::Shuffle()
 /* This function takes the current set and the set provided as an argument and makes the
  * current set contain all the cards from the two sets, with cards alternating from each
  * set as far as possible. After this function the argument set will be empty. */
+// TODO: Need to debug. There is an error with memory alloc
 void CardSet::MergeShuffle(CardSet& Set)
 {
-    int NewCardSz = nCards + Set.Size();  // Maintain a separate counter
-    int *NewCards = new int[NewCardSz];  // Alloc memory for superset of Cards
+    int newCardSz = nCards + Set.Size();  // Maintain a separate counter
+    int *newCardSet = new int[newCardSz];  // Alloc memory for superset of Cards
 
     int idx=0;
-    while(idx<NewCardSz) {
-        if (CardSet::Size() > 0) NewCards[idx++] = CardSet::Deal();
-        if (Set.Size() > 0) NewCards[idx++] = Set.Deal();
+    while(idx<newCardSz) {
+        if (CardSet::Size() > 0) newCardSet[idx++] = CardSet::Deal();
+        if (Set.Size() > 0) newCardSet[idx++] = Set.Deal();
     }
 
-    nCards = NewCardSz;
-    int *TmpCardPtr;
-    TmpCardPtr = Card;
-    Card = NULL;
-    delete [] TmpCardPtr;
-    Card = NewCards;
+    nCards = newCardSz;
+    delete [] Card;
+    Card = newCardSet;
 }
 
 /*************** ACCESSORS ***************/
@@ -141,13 +141,13 @@ int CardSet::Size() const
     return nCards;
 }
 
+/* This function returns a bool if the CardSet is empty */
 bool CardSet::IsEmpty() const
 {
     return (Card == NULL);
 }
 
-// This accessor function, uses PrintCard to print the contents of the set,
-// five cards to a line.
+/* This function, uses PrintCard to print the contents of the set, five cards to a line. */
 void CardSet::Print() const
 {
     if (debug) {
@@ -166,8 +166,8 @@ void CardSet::Print() const
     cout<<endl<<endl;
 }
 
-// Private function to print out usual representation of playing card.
-// Input is integer from 0 to 51.  There is no error checking.
+/* Private function to print out usual representation of playing card.
+ * Input is integer from 0 to 51.  There is no error checking. */
 void CardSet::PrintCard(int c) const
 {
 	int Rank = c%13;
