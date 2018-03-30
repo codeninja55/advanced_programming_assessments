@@ -125,13 +125,27 @@ void CardSet::Shuffle()
 /* This function takes the current set and the set provided as an argument and makes the
  * current set contain all the cards from the two sets, with cards alternating from each
  * set as far as possible. After this function the argument set will be empty. */
-void MergeShuffle(CardSet& Set)
+void CardSet::MergeShuffle(CardSet& Set)
 {
+    int NewCardSz = nCards + Set.Size();  // Maintain a separate counter
+    int *NewCards = new int[NewCardSz];  // Alloc memory for superset of Cards
 
+    int idx=0;
+    while(idx<NewCardSz) {
+        if (CardSet::Size() > 0) NewCards[idx++] = CardSet::Deal();
+        if (Set.Size() > 0) NewCards[idx++] = Set.Deal();
+    }
+
+    nCards = NewCardSz;
+    int *TmpCardPtr;
+    TmpCardPtr = Card;
+    Card = NULL;
+    delete [] TmpCardPtr;
+    Card = NewCards;
 }
 
 /*************** ACCESSORS ***************/
-// This accessor function should return the value of nCards.
+/* This accessor function should return the value of nCards. */
 int CardSet::Size() const
 {
     return nCards;
