@@ -8,10 +8,11 @@
 
 class CardSet
 {
-	public:
-		CardSet();
+    public:
+        CardSet();
 		CardSet(int);
-		~CardSet();
+        CardSet(const CardSet&);  // copy constructor
+        ~CardSet();
 		int Size() const;
 		bool IsEmpty() const;
 		void Shuffle();
