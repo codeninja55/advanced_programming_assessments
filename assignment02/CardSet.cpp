@@ -9,8 +9,6 @@
 #include "CardSet.h"
 using namespace std;
 
-const bool debug = true;
-
 /*************** CONSTRUCTORS ***************/
 
 /* Default constructor sets up 0 cards using member initialization. */
@@ -28,12 +26,7 @@ CardSet::CardSet(int n)
 /*************** DESTRUCTOR ***************/
 CardSet::~CardSet()
 {
-    if (Card != NULL) {
-        int *Tmp;
-        Tmp = Card;
-        Card = NULL;
-        delete [] Tmp;
-    }
+    delete [] Card;
 }
 
 /*************** COPY CONSTRUCTOR & ASSIGNMENT OVERLOAD***************/
@@ -62,21 +55,19 @@ CardSet& CardSet::operator=(const CardSet& other) const
 /* Returns the first card in the set and reallocates memory for a new set with 1 less card. */
 int CardSet::Deal()
 {
-    if (Card == NULL) {
+    if (CardSet::IsEmpty()) {
         cout<<"[ERROR] The Card set is empty."<<endl;
         exit(1);
     }
 
     int DealCard = Card[0];
     nCards -= 1;
-    int *newCardSet = new int[nCards];
-    int j=0;
-    for (int i=1; i <= nCards; i++) newCardSet[j++] = Card[i];
-
-    int *Tmp;
-    Tmp = Card;
-    delete [] Tmp;
-    Card = newCardSet;
+    if (nCards > 0) {
+        int *newCardSet = new int[nCards];
+        int j=1;
+        for (int i=0; i < nCards; i++) newCardSet[i] = Card[j++];
+        Card = newCardSet;
+    }
     return DealCard;
 }
 
@@ -109,10 +100,10 @@ void CardSet::Deal(int n, CardSet& Set1, CardSet& Set2, CardSet& Set3, CardSet& 
     }
 
     for (int i=0; i < n; i++) {
-        Set1.AddCard(Deal());
-        Set2.AddCard(Deal());
-        Set3.AddCard(Deal());
-        Set4.AddCard(Deal());
+        Set1.AddCard(CardSet::Deal());
+        Set2.AddCard(CardSet::Deal());
+        Set3.AddCard(CardSet::Deal());
+        Set4.AddCard(CardSet::Deal());
     }
 }
 
@@ -124,13 +115,10 @@ void CardSet::AddCard(int newCard)
     int *newCardSet = new int[nCards];
     newCardSet[0] = newCard;
 
-    int i=1;
+    int i=0;  // Skip the first card in the new Set because of the added card
     if (CardSet::Size() > 1)
-        for (int j=0; j < nCards; j++) newCardSet[i++] = Card[j];
+        for (int j=1; j < nCards; j++) newCardSet[j] = Card[i++];
 
-    int *Tmp;
-    Tmp = Card;
-    delete [] Tmp;
     Card = newCardSet;
 }
 
@@ -143,8 +131,7 @@ void CardSet::Shuffle()
         j = rand() % nCards - 1;
 
         if (i != j) {
-            int TmpCard;
-            TmpCard = Card[i];
+            int TmpCard = Card[i];
             Card[i] = Card[j];
             Card[j] = TmpCard;
         }
@@ -154,7 +141,6 @@ void CardSet::Shuffle()
 /* This function takes the current set and the set provided as an argument and makes the
  * current set contain all the cards from the two sets, with cards alternating from each
  * set as far as possible. After this function the argument set will be empty. */
-// TODO: Need to debug. There is an error with memory alloc
 void CardSet::MergeShuffle(CardSet& Set)
 {
     int newCardSz = nCards + Set.Size();  // Maintain a separate counter
@@ -162,14 +148,11 @@ void CardSet::MergeShuffle(CardSet& Set)
 
     int idx=0;
     while(idx<newCardSz) {
-        if (CardSet::Size() > 0) newCardSet[idx++] = CardSet::Deal();
+        if (CardSet::Size() > 0) newCardSet[idx++] = Deal();
         if (Set.Size() > 0) newCardSet[idx++] = Set.Deal();
     }
 
     nCards = newCardSz;
-    int *Tmp;
-    Tmp = Card;
-    delete [] Tmp;
     Card = newCardSet;
 }
 
@@ -189,15 +172,6 @@ bool CardSet::IsEmpty() const
 /* This function, uses PrintCard to print the contents of the set, five cards to a line. */
 void CardSet::Print() const
 {
-    if (debug) {
-        cout<<"\n[DEBUG]";
-        for (int j=0; j < nCards; j++) {
-            if ((j%10) == 0) cout<<endl;
-            cout<<Card[j]<<" ";
-        }
-        cout<<endl;
-    }
-
     for (int i=0; i < nCards; i++) {
         if ((i%5) == 0) cout<<endl;
         PrintCard(Card[i]);
