@@ -40,15 +40,15 @@ int main()
 	cout << "Printout of CardSet1:" << endl;
 	CardSet1.Print();
 	cout << endl;
-    if(debug) cout << "=================================================================="<<endl;
+    if(debug) cout << "========================================================"<<endl;
 
     cout << "Test 3: Normal Shuffle: "<< endl;
-    if(debug) cout << "=================================================================="<<endl;
+    if(debug) cout << "========================================================"<<endl;
     CardSet1.Shuffle();
     cout << "Printout of shuffled CardSet1:" << endl;
     CardSet1.Print();
     cout << endl;
-    if(debug) cout << "=================================================================="<<endl;
+    if(debug) cout << "=================================================="<<endl;
 
     cout << "Test 4: Merge Shuffle: "<< endl;
     if(debug) cout << "=================================================="<<endl;

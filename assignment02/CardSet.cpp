@@ -26,29 +26,8 @@ CardSet::CardSet(int n)
 /*************** DESTRUCTOR ***************/
 CardSet::~CardSet()
 {
-    delete [] Card;
+    if(Card != NULL) delete [] Card;
 }
-
-/*************** COPY CONSTRUCTOR & ASSIGNMENT OVERLOAD***************/
-/*CardSet::CardSet(const CardSet& other)
-{
-    if (!other.IsEmpty()) {
-        nCards = other.Size();
-        for (int i=0; i < nCards; i++) Card[i] = other.Deal();
-    }
-}
-
-CardSet& CardSet::operator=(const CardSet& other) const
-{
-    if (this != other) {
-        delete [] Card;
-        nCards = other.Size();
-        //int *localCardSet = new int[nCards];
-        for (int i=0; i < nCards; i++) Card[i] = other.Deal();
-        //for (int i=0; i < nCards; i++) localCardSet[i] = other.Deal();
-    }
-    return *this;
-}*/
 
 /*************** MUTATORS ***************/
 
@@ -118,7 +97,7 @@ void CardSet::AddCard(int newCard)
     int i=0;  // Skip the first card in the new Set because of the added card
     if (CardSet::Size() > 1)
         for (int j=1; j < nCards; j++) newCardSet[j] = Card[i++];
-
+    delete [] Card;
     Card = newCardSet;
 }
 
@@ -152,6 +131,7 @@ void CardSet::MergeShuffle(CardSet& Set)
         if (Set.Size() > 0) newCardSet[idx++] = Set.Deal();
     }
 
+    delete [] Card;
     nCards = newCardSz;
     Card = newCardSet;
 }
