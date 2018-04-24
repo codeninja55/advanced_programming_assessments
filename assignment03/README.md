@@ -32,7 +32,7 @@ together with “set” or “map” or “multi-map” etc.
 
 For this assignment you are to implement a C++ program that can read a text file and display any known words on the screen together with their frequency and position in the file. Below shows a snippet of what the output should look like: 
 
-![Output example](/home/codeninja/Dropbox/uow_csci251/development/assignment03/1.png)
+![Output example](./1.png)
 
 
 
@@ -51,7 +51,7 @@ set<string> Dictionary;
 If you are unsure on using the STL set container, take a look at “08-set.cpp” in the examples folder. `DisplayDictionary()` should display the first 20 words in the Dictionary on the screen. The 
 screenshot below shows an example output of reading and displaying the dictionary. 
 
-![Example output of Dictionary](/home/codeninja/Dropbox/uow_csci251/development/assignment03/2.png)
+![Example output of Dictionary](./2.png)
 
 
 
