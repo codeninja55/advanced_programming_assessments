@@ -16,7 +16,9 @@ LinkedList::LinkedList() : Head(NULL) { }
 // Copy constructor
 LinkedList::LinkedList(const LinkedList& otherList)
 {
-    LinkedList tmpList;
+    Head = NULL;
+    *this = otherList;
+    /*LinkedList tmpList;
     Head = NULL;
     NodePtr curr = otherList.Head;
     while (curr != NULL) {
@@ -25,7 +27,7 @@ LinkedList::LinkedList(const LinkedList& otherList)
     }
 
     while (!tmpList.IsEmpty())
-        LinkedList::AddHead(tmpList.RemoveHead());
+        LinkedList::AddHead(tmpList.RemoveHead());*/
 }
 
 // Destructor
@@ -41,8 +43,11 @@ LinkedList::~LinkedList()
 // Assignment operator overload
 LinkedList& LinkedList::operator=(const LinkedList& rOperand)
 {
+    this->~LinkedList();
     LinkedList tmpList;
-    Head = NULL;
+
+    if (Head == rOperand.Head) exit(0);
+
     NodePtr curr = rOperand.Head;
     while (curr != NULL) {
         tmpList.AddHead(curr->Item);

@@ -35,8 +35,6 @@ int main()
 	cout << "\nTesting copy constructor...\n";
 	LinkedList L2(L1);
 	L1.Print();
-	//L1.RemoveHead();
-	//L1.RemoveHead();
 	L2.Print();
 	cout << endl;
 
