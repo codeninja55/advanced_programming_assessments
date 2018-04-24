@@ -15,7 +15,7 @@ int main(){
 
    cout << "Step-1 Reading and displaying dictionary\n";
    ws.ReadDictionary();
-   ws.DisplayDictionary();
+   //ws.DisplayDictionary();
 
    cout << "Step-2 Reading words from text file\n";
    ws.ReadTxtFile();
@@ -26,7 +26,7 @@ int main(){
    cout << "Step-4 Displaying unknown words:\n";
    ws.DisplayUnknownWordStats();
 
-   cout << "Step-5 Displaying most frequent known words\n";
+   /*cout << "Step-5 Displaying most frequent known words\n";
    ws.DisplayMostFreqKnownWords();
 
    cout << "Step-6 Displaying most frequent unknown words\n";
@@ -35,7 +35,7 @@ int main(){
    cout << "Step-7 Displaying original text\n";
    ws.DisplayOriginalText();
 
-   cout << "\nEnd Text File Analyser Tests\n\n";
+   cout << "\nEnd Text File Analyser Tests\n\n";*/
 
    return 0;
 }

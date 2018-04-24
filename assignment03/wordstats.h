@@ -35,9 +35,10 @@ class WordStats
 		WordMap UnknownWords;
 		set<string> Dictionary;
 		char Filename[256];
-		
+		char DictFile[256];
 		//add your private fns here
-		
+        string ToLower(string);
+        string PreprocessWord(string);
 };
 
 #endif
