@@ -35,18 +35,19 @@ void WordStats::ReadDictionary(){
         fin>>word;
         Dictionary.insert(ToLower(word));
     }
-    cout<<Dictionary.size()<<" words read from dictionary."<<endl;
+    cout<<Dictionary.size()<<" words read from dictionary."<<endl<<endl;
 }
 
 // Displays the first 20 words in the dictionary set
 void WordStats::DisplayDictionary(){
     set<string>::iterator iter = Dictionary.begin();
-    int count = 1;
+    int count = 0;
     cout<<"Displaying the first 20 words in the dictionary..."<<endl;
     for (iter; iter!=Dictionary.end(); ++iter) {
         cout<<*iter<<endl;
-        if (count++ == 20) return;
+        if (count++ == 19) break;
     }
+    cout<<endl;
 }
 
 // Reads textfile into KnownWords and UnknownWords
@@ -91,39 +92,91 @@ void WordStats::ReadTxtFile()
     }
 
     cout<<KnownWords.size()<<" known words read."<<endl;
-    cout<<UnknownWords.size()<<" unknown words read."<<endl;
+    cout<<UnknownWords.size()<<" unknown words read."<<endl<<endl;
 }
 
 // Displays stats of words in KnownWords
 void WordStats::DisplayKnownWordStats()
 {
+    cout<<setw(15)<<right<<"Word"<<'\t';
+    cout<<setw(6)<<right<<"Count"<<'\t';
+    cout<<setw(25)<<left<<"Positions"<<endl;
+
     for (WordMapIter iter = KnownWords.begin(); iter != KnownWords.end(); ++iter) {
-        cout<<(*iter).first<<" | ";
         vector<int> vect = (*iter).second;
-        cout<<vect.size()<<" | ";
+        cout<<setw(15)<<right<<(*iter).first<<'\t';
+        cout<<setw(4)<<right<<vect.size()<<'\t';
+        cout<<setw(3)<<left;
         copy(vect.begin(), vect.end(), ostream_iterator<int>(cout, " "));
         cout<<endl;
     }
+    cout<<endl;
 }
 
 // Displays stats of words in UnknownWords
 void WordStats::DisplayUnknownWordStats()
 {
+    cout<<setw(15)<<right<<"Word"<<'\t';
+    cout<<setw(6)<<right<<"Count"<<'\t';
+    cout<<setw(25)<<left<<"Positions";
+    cout<<endl;
+
     for (WordMapIter iter = UnknownWords.begin(); iter != UnknownWords.end(); ++iter) {
-        cout<<(*iter).first<<" | ";
         vector<int> vect = (*iter).second;
-        cout<<vect.size()<<" | ";
+
+        cout<<setw(15)<<right<<(*iter).first<<'\t';
+        cout<<setw(4)<<right<<vect.size()<<'\t';
+        cout<<setw(3)<<left;
         copy(vect.begin(), vect.end(), ostream_iterator<int>(cout, " "));
         cout<<endl;
     }
+    cout<<endl;
 }
 
 // Displays 20 most frequent words in KnownWords
-void WordStats::DisplayMostFreqKnownWords(){
+void WordStats::DisplayMostFreqKnownWords()
+{
+    multimap<int, string> MostFreqWords;
+    multimap<int, string>::reverse_iterator RMMapIter;
+    int count = 0;
+
+    for (WordMapIter iter = KnownWords.begin(); iter != KnownWords.end(); ++iter){
+        vector<int> vect = (*iter).second;
+        MostFreqWords.insert(pair<int, string>(vect.size(), (*iter).first));
+    }
+
+    cout<<right<<setw(15)<<"Word";
+    cout<<setw(8)<<"Count"<<endl;
+    for (RMMapIter = MostFreqWords.rbegin(); RMMapIter != MostFreqWords.rend(); ++RMMapIter) {
+        cout<<setw(15)<<(*RMMapIter).second;
+        cout<<right;
+        cout<<setw(6)<<(*RMMapIter).first<<endl;
+        if (count++ == 19) break;
+    }
+    cout<<endl;
 }
 
 // Displays 20 most frequent words in UnknownWords
-void WordStats::DisplayMostFreqUnknownWords(){
+void WordStats::DisplayMostFreqUnknownWords()
+{
+    multimap<int, string> MostFreqWords;
+    multimap<int, string>::reverse_iterator RMMapIter;
+    int count = 0;
+
+    for (WordMapIter iter = UnknownWords.begin(); iter != UnknownWords.end(); ++iter){
+        vector<int> vect = (*iter).second;
+        MostFreqWords.insert(pair<int, string>(vect.size(), (*iter).first));
+    }
+
+    cout<<right<<setw(15)<<"Word";
+    cout<<setw(8)<<"Count"<<endl;
+    for (RMMapIter = MostFreqWords.rbegin(); RMMapIter != MostFreqWords.rend(); ++RMMapIter) {
+        cout<<setw(15)<<(*RMMapIter).second;
+        cout<<right;
+        cout<<setw(6)<<(*RMMapIter).first<<endl;
+        if (count++ == 19) break;
+    }
+    cout<<endl;
 }
 
 // Displays original text from KnownWords & UnknownWords
