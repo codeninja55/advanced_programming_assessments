@@ -18,7 +18,8 @@ WordStats::WordStats(){
 }
 
 // Reads dictionary.txt into Dictionary
-void WordStats::ReadDictionary(){
+void WordStats::ReadDictionary()
+{
     ifstream fin;
     string word;
 
@@ -39,7 +40,8 @@ void WordStats::ReadDictionary(){
 }
 
 // Displays the first 20 words in the dictionary set
-void WordStats::DisplayDictionary(){
+void WordStats::DisplayDictionary()
+{
     set<string>::iterator iter = Dictionary.begin();
     int count = 0;
     cout<<"Displaying the first 20 words in the dictionary..."<<endl;
@@ -66,6 +68,7 @@ void WordStats::ReadTxtFile()
 
     while(!fin.eof()) {
         fin>>word;
+        if (word.size() == 1 && char(word[0]) == '-') continue;
         cleaned_word = PreprocessWord(ToLower(word));
         // If the cleaned_word in Dictionary set
         set<string>::iterator dictSetIter = Dictionary.find(cleaned_word);
@@ -182,14 +185,42 @@ void WordStats::DisplayMostFreqUnknownWords()
 // Displays original text from KnownWords & UnknownWords
 void WordStats::DisplayOriginalText()
 {
+    map<int, string> OriginalTextMap;
+    map<int, string>::iterator TextMapIter;
+    WordMapIter KnownWordsIter;
+    WordMapIter UnknownWordsIter;
+
+    for (KnownWordsIter = KnownWords.begin(); KnownWordsIter != KnownWords.end(); ++KnownWordsIter) {
+        vector<int>::iterator VectIter;
+        vector<int> vect = (*KnownWordsIter).second;
+
+        for (VectIter = vect.begin(); VectIter != vect.end(); ++VectIter) {
+            OriginalTextMap.insert(pair<int, string>((*VectIter), (*KnownWordsIter).first));
+        }
+    }
+
+    for (UnknownWordsIter = UnknownWords.begin(); UnknownWordsIter != UnknownWords.end(); ++UnknownWordsIter) {
+        vector<int>::iterator VectIter;
+        vector<int> vect = (*UnknownWordsIter).second;
+
+        for (VectIter = vect.begin(); VectIter != vect.end(); ++VectIter) {
+            OriginalTextMap.insert(pair<int, string>((*VectIter), (*UnknownWordsIter).first));
+        }
+    }
+
+    // Print the original text in order
+    for (TextMapIter = OriginalTextMap.begin(); TextMapIter != OriginalTextMap.end(); ++TextMapIter) {
+        cout<<(*TextMapIter).second<<" ";
+    }
+
+    cout<<endl;
 }
 
 // ============ Private Fns ========================
 
 string WordStats::ToLower(string word)
 {
-    for (int i=0; i<word.length(); i++)
-        word[i] = tolower(word[i]);
+    for (int i=0; i<word.length(); i++) word[i] = tolower(word[i]);
     return word;
 }
 
@@ -197,19 +228,9 @@ string WordStats::PreprocessWord(string word)
 {
     string cleaned_word;
     for (int i=0; i<word.length(); ++i) {
-        if (char(word[i]) == char(45)) cleaned_word += word[i];  // Char code 45: '-'
-        else if (char(word[i]) == char(39)) cleaned_word += word[i]; // Char code 39: "'"
-        else if (isalpha(word[i])) cleaned_word += word[i];
+        if (isalpha(word[i])) cleaned_word += word[i];
+        else if (char(word[i]) == '\'') cleaned_word += word[i];  // Char code 45: '-'
+        else if (char(word[i]) == '-') cleaned_word += word[i]; // Char code 39: "'"
     }
-
-    /*for(int i=0; i<word.size(); ++i) {
-        while(!isalpha(word[i]) && i<word.size())
-            word.erase(i, 1);
-    }*/
-    // Only available with std=c++11
-    /*word.erase(remove_if(word.begin(), word.end(), [](char c) {
-        return !isalnum(c);
-    }), word.end());*/
-
     return cleaned_word;
 }
