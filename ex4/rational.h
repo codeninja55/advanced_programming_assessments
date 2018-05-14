@@ -14,9 +14,9 @@ class Rational {
 	Rational();  // default constructor
 	Rational(int, int); //std (initialisation) constructor
 	Rational(const Rational&); //copy constructor
-	Rational addition(const Rational &);
-	Rational subtraction(const Rational &);
-	Rational multiplication(const Rational &);
+	Rational addition(const Rational&);
+	Rational subtraction(const Rational&);
+	Rational multiplication(const Rational&);
 	Rational division(Rational &);
 	void printRational();
 

@@ -35,6 +35,17 @@ int main()
 	n1.printRational();
 	cout << endl << endl;
 
+	cout<<"Testing addition 2: ";
+	Rational n4(1, 4);
+	Rational n5(1, 4);
+	n1 = n4.addition(n5);
+	n4.printRational();
+	cout <<" + ";
+	n5.printRational();
+	cout <<" = ";
+	n1.printRational();
+	cout << endl << endl;
+
 	cout<<"Testing subtraction: ";
 	n1 = n2.subtraction(n3);
 	n2.printRational();
@@ -53,7 +64,7 @@ int main()
 	n1.printRational();
 	cout << endl << endl;
 
-	cout<<"Testing devision: ";
+	cout<<"Testing division: ";
 	n1 = n2.division(n3);
 	n2.printRational();
 	cout <<" / ";
@@ -62,7 +73,7 @@ int main()
 	n1.printRational();
 	cout << endl << endl;
 
-	cout << "\nEnd Rational Class Tests\n\n";
+	cout << "End Rational Class Tests\n\n";
 	
 	return 0;
 }
