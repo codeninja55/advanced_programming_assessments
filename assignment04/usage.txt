@@ -1,0 +1,6174 @@
+Phone
+Origin
+George Carter
+24 Dingo St Exeter SA
+-0.01
+28
+283
+0.14
+245
+0.32
+0.44
+
+Gas
+EA
+Paul Scott
+21 Beach Rd Barham NSW
+15.48
+30
+14148
+14224
+38.40
+0.039
+0.56
+
+Elect
+Alinta
+Brian Crowe
+43 Beach Rd Hanwood WA
+-9.44
+31
+113144
+113568
+0.28
+525
+0.30
+0.83
+
+Elect
+Origin
+George Lewis
+19 Willey Rd  NSW
+13.89
+31
+104164
+104746
+0.38
+515
+0.43
+0.97
+
+Phone
+Origin
+Kevin Turner
+37 Rose Ave  VIC
+2.28
+29
+307
+0.10
+283
+0.20
+0.41
+
+Phone
+Alinta
+Jannet Walker
+53 Beach Rd Kendall TAS
+17.85
+28
+350
+0.11
+240
+0.33
+0.44
+
+Phone
+Red
+Paul Hill
+49 Peace Ave Copley SA
+-16.45
+29
+306
+0.11
+291
+0.26
+0.31
+
+Gas
+Dodo
+John Harris
+50 Rose Ave Barnes NSW
+18.89
+28
+18292
+18352
+39.00
+0.036
+0.63
+
+Gas
+Red
+Sharon Baker
+86 John St Milton WA
+2.72
+28
+12267
+12314
+39.60
+0.039
+0.50
+
+Phone
+Origin
+Edward Young
+61 John St Dalton WA
+17.76
+30
+283
+0.14
+232
+0.24
+0.34
+
+Elect
+Origin
+Donna Rao
+27 Rose Ave Windsor VIC
+-5.84
+31
+126918
+127346
+0.28
+505
+0.30
+0.99
+
+Elect
+Dodo
+David Carter
+67 John St Dunwich TAS
+-7.33
+31
+108427
+108867
+0.35
+500
+0.37
+0.97
+
+Elect
+Origin
+Carol Harris
+95 John St  NSW
+-11.59
+29
+129600
+130088
+0.32
+515
+0.34
+0.99
+
+Phone
+Dodo
+David Carter
+67 John St Dunwich TAS
+-7.41
+31
+264
+0.12
+248
+0.34
+0.31
+
+Phone
+AGL
+Thomas Adams
+11 Joy St Ipswich NSW
+-6.23
+29
+212
+0.08
+215
+0.30
+0.31
+
+Gas
+Dodo
+David Carter
+67 John St Dunwich TAS
+-7.78
+28
+19022
+19087
+39.20
+0.032
+0.67
+
+Gas
+Click
+Daniel Jones
+6 John St Clayton VIC
+15.33
+28
+12405
+12458
+39.70
+0.034
+0.57
+
+Phone
+Click
+Karen Baker
+92 Broke St Windsor NT
+-11.12
+28
+263
+0.11
+275
+0.26
+0.40
+
+Phone
+Origin
+Mark Perez
+68 John St Ilford SA
+16.51
+30
+299
+0.06
+219
+0.21
+0.31
+
+Phone
+Click
+Brian Scott
+72 Willey Rd Otford NSW
+14.20
+28
+342
+0.09
+252
+0.22
+0.39
+
+Gas
+Dodo
+Karen Rao
+78 John St Penrose VIC
+1.48
+28
+17948
+18016
+38.90
+0.031
+0.52
+
+Phone
+Dodo
+Karen Rao
+78 John St Penrose VIC
+25.67
+28
+261
+0.10
+244
+0.31
+0.42
+
+Phone
+Red
+Jeff Perez
+51 Rose Ave Barnes TAS
+-3.20
+30
+263
+0.05
+237
+0.28
+0.48
+
+Elect
+Dodo
+Karen Rao
+78 John St Penrose VIC
+10.08
+29
+117298
+117833
+0.38
+520
+0.42
+0.85
+
+Phone
+AGL
+Sandra Scott
+11 Willey Rd Bookham VIC
+-8.15
+30
+254
+0.11
+235
+0.28
+0.32
+
+Gas
+Dodo
+Betty Jim
+2 Dingo St Burton SA
+-18.66
+30
+12621
+12690
+38.00
+0.035
+0.63
+
+Elect
+Red
+Jason Green
+9 Broke St Dutton TAS
+26.45
+31
+115469
+116191
+0.32
+540
+0.32
+0.85
+
+Gas
+EA
+Robert Willey
+52 Beach Rd Bookham QLD
+3.34
+29
+18960
+19005
+39.70
+0.038
+0.50
+
+Phone
+Click
+John Lee
+77 Dingo St Copley TAS
+-20.78
+29
+380
+0.10
+283
+0.36
+0.34
+
+Phone
+AGL
+Donna Smith
+46 Joy St Toronto VIC
+21.64
+29
+347
+0.08
+245
+0.21
+0.37
+
+Elect
+Alinta
+Betty Walker
+63 Connell St Euston SA
+-7.20
+29
+104683
+105265
+0.32
+510
+0.29
+0.93
+
+Elect
+Red
+Karen Clark
+83 John St Dalton QLD
+22.08
+29
+131158
+131702
+0.32
+530
+0.29
+0.99
+
+Elect
+Red
+Jason Baker
+95 Connell St Otford QLD
+11.35
+28
+110701
+111172
+0.35
+515
+0.37
+0.93
+
+Elect
+Dodo
+Joseph Black
+52 Rose Ave Otford QLD
+-1.45
+30
+121907
+122530
+0.26
+540
+0.29
+0.82
+
+Phone
+Dodo
+Joseph Black
+52 Rose Ave Otford QLD
+25.51
+28
+279
+0.14
+280
+0.30
+0.31
+
+Phone
+EA
+John Smith
+31 Broke St Dunwich SA
+-2.40
+30
+291
+0.08
+244
+0.29
+0.45
+
+Phone
+Alinta
+Bill Lopez
+11 Dingo St Windsor VIC
+-6.49
+28
+350
+0.13
+214
+0.37
+0.49
+
+Phone
+AGL
+Lisa Lewis
+42 Peace Ave Otford QLD
+25.74
+29
+290
+0.13
+241
+0.39
+0.30
+
+Phone
+Red
+Helen Baker
+93 Joy St Chelsea QLD
+-12.54
+31
+364
+0.14
+203
+0.31
+0.35
+
+Elect
+Click
+Donald Rao
+8 Willey Rd Sydney VIC
+-15.23
+28
+106723
+107490
+0.25
+520
+0.25
+0.86
+
+Elect
+EA
+George Crowe
+64 Joy St Hanwood QLD
+7.94
+28
+121921
+122367
+0.32
+500
+0.35
+0.85
+
+Phone
+Red
+Nancy Thomas
+24 Rose Ave Hanwood VIC
+12.98
+29
+294
+0.10
+262
+0.31
+0.31
+
+Elect
+AGL
+Joseph Garcia
+47 Peace Ave NewhamWinton NT
+-10.09
+31
+103852
+104321
+0.30
+535
+0.35
+0.88
+
+Gas
+Dodo
+Joseph Black
+52 Rose Ave Otford QLD
+24.18
+31
+12888
+12964
+38.30
+0.038
+0.64
+
+Elect
+Red
+Steven Green
+59 Peace Ave Everton WA
+-9.93
+30
+101318
+101941
+0.25
+510
+0.25
+0.91
+
+Elect
+AGL
+Tom Perez
+90 Peace Ave Dunwich VIC
+-1.60
+30
+130851
+131336
+0.36
+540
+0.34
+0.95
+
+Phone
+Red
+Jeff Davis
+33 Rose Ave Penrose NSW
+-1.08
+31
+380
+0.13
+268
+0.33
+0.30
+
+Elect
+AGL
+Tom Clark
+82 Rose Ave Dunwich NSW
+-5.60
+29
+108312
+108950
+0.38
+500
+0.37
+0.92
+
+Elect
+Dodo
+Kevin Wilson
+4 John St Belford VIC
+17.83
+31
+109047
+109516
+0.35
+540
+0.34
+0.86
+
+Phone
+Origin
+Thomas Evans
+16 Rose Ave Ilford VIC
+-15.33
+31
+310
+0.12
+232
+0.39
+0.48
+
+Gas
+Alinta
+Laura Adams
+73 Willey Rd Belford TAS
+4.25
+30
+16708
+16785
+39.30
+0.039
+0.69
+
+Elect
+AGL
+Bill Taylor
+60 Joy St Ilford WA
+9.12
+29
+109738
+110143
+0.30
+505
+0.29
+0.92
+
+Elect
+Red
+Linda Clark
+79 Broke St  QLD
+15.74
+30
+109717
+110204
+0.32
+535
+0.34
+0.92
+
+Gas
+Red
+Ruth Miller
+48 John St Barham SA
+17.55
+31
+11978
+12030
+39.90
+0.034
+0.48
+
+Elect
+Dodo
+Tom Hill
+52 Rose Ave Horsham TAS
+-11.67
+31
+129453
+129970
+0.27
+530
+0.24
+0.91
+
+Elect
+Click
+Helen Black
+20 Broke St Glossop NSW
+0.80
+28
+111460
+111975
+0.34
+500
+0.36
+0.82
+
+Gas
+Alinta
+Edward Wilson
+25 Broke St Gatton QLD
+-15.42
+31
+11412
+11475
+39.50
+0.030
+0.69
+
+Gas
+Dodo
+Jannet Davis
+60 Peace Ave Hammond QLD
+-22.17
+30
+10689
+10756
+38.30
+0.039
+0.52
+
+Elect
+EA
+Robert Evans
+39 Peace Ave Dalton SA
+-14.80
+28
+121265
+121783
+0.39
+530
+0.42
+0.95
+
+Elect
+EA
+Brian Turner
+68 Broke St Barham WA
+-3.53
+31
+111273
+111868
+0.37
+535
+0.35
+0.98
+
+Elect
+Dodo
+Sarah Carter
+47 Beach Rd Glossop WA
+-0.20
+28
+122093
+122582
+0.25
+545
+0.22
+0.93
+
+Phone
+Dodo
+Sharon Miller
+49 John St Burnley NT
+-21.91
+28
+227
+0.10
+259
+0.26
+0.45
+
+Elect
+Red
+Paul Willey
+26 Beach Rd Copley TAS
+-16.50
+29
+121168
+121615
+0.36
+540
+0.39
+0.85
+
+Gas
+EA
+Daniel Hall
+38 John St Malvern VIC
+-3.05
+30
+19007
+19063
+39.60
+0.033
+0.60
+
+Elect
+AGL
+James Lopez
+93 Rose Ave Barham QLD
+23.00
+29
+131016
+131672
+0.27
+515
+0.25
+0.89
+
+Elect
+AGL
+Jill Baker
+5 Rose Ave Sydney SA
+-18.05
+28
+131653
+132100
+0.31
+510
+0.27
+0.90
+
+Elect
+Red
+Daniel Wright
+46 Broke St Toronto NSW
+-20.64
+31
+125326
+125814
+0.32
+500
+0.29
+0.85
+
+Gas
+Red
+Brian Wright
+89 Broke St Copley QLD
+-16.79
+30
+12188
+12237
+38.20
+0.037
+0.69
+
+Elect
+Click
+Jill Perez
+47 Rose Ave NewhamWinton WA
+0.99
+28
+130537
+131319
+0.27
+545
+0.25
+0.85
+
+Phone
+Alinta
+Joseph Lewis
+2 Rose Ave Hanwood NSW
+-10.14
+28
+334
+0.10
+287
+0.36
+0.34
+
+Gas
+Origin
+Edward Davis
+45 Rose Ave Malvern VIC
+-11.59
+30
+12325
+12400
+39.40
+0.036
+0.45
+
+Phone
+EA
+Carol Crowe
+30 Willey Rd Dalby QLD
+-19.56
+28
+334
+0.08
+228
+0.29
+0.33
+
+Phone
+Origin
+Tom Thomas
+88 John St Kendall TAS
+7.78
+28
+221
+0.05
+218
+0.22
+0.37
+
+Elect
+Origin
+Thomas Willey
+97 Joy St Everton WA
+-6.56
+30
+128925
+129422
+0.35
+540
+0.31
+0.83
+
+Elect
+EA
+Linda Lewis
+60 Willey Rd Toronto WA
+1.93
+30
+112514
+113093
+0.27
+545
+0.27
+0.80
+
+Elect
+Click
+Linda Taylor
+86 Joy St Epping WA
+-17.93
+30
+109695
+110250
+0.32
+545
+0.34
+0.90
+
+Phone
+AGL
+Tom Hill
+76 Willey Rd Burton TAS
+23.48
+29
+225
+0.06
+259
+0.33
+0.34
+
+Phone
+EA
+Helen Wilson
+46 John St Malvern QLD
+13.73
+29
+218
+0.05
+220
+0.38
+0.43
+
+Elect
+Red
+Lisa Jim
+42 Willey Rd Euston WA
+17.17
+28
+105781
+106267
+0.31
+515
+0.27
+0.82
+
+Elect
+Origin
+Thomas Turner
+73 John St Belford VIC
+11.80
+31
+120453
+121136
+0.31
+505
+0.30
+0.80
+
+Phone
+Dodo
+Brian Perez
+53 John St Kempton WA
+4.65
+31
+372
+0.14
+216
+0.35
+0.40
+
+Phone
+Click
+Bill Willey
+33 Joy St Copley VIC
+6.71
+28
+303
+0.10
+261
+0.21
+0.35
+
+Gas
+AGL
+Jannet Wilson
+22 John St Exeter WA
+-19.74
+28
+19670
+19744
+39.20
+0.031
+0.65
+
+Elect
+Dodo
+Brian Smith
+24 Connell St Grafton VIC
+25.92
+28
+119313
+119759
+0.25
+500
+0.28
+0.92
+
+Elect
+Origin
+Karen Hall
+58 Peace Ave Bexhill NT
+-21.29
+30
+128293
+129024
+0.39
+510
+0.38
+0.83
+
+Gas
+Red
+Paul Wilson
+42 Connell St Kendall WA
+-8.38
+30
+16857
+16932
+39.60
+0.031
+0.68
+
+Gas
+Dodo
+Helen Carter
+9 Rose Ave Toronto NT
+-0.23
+30
+10065
+10119
+39.60
+0.036
+0.50
+
+Elect
+Origin
+Sandra Evans
+95 Beach Rd Milton VIC
+11.41
+30
+117202
+117688
+0.38
+500
+0.37
+0.97
+
+Gas
+Alinta
+Jannet Jones
+28 Connell St Orford TAS
+-12.74
+28
+19489
+19549
+39.20
+0.037
+0.55
+
+Elect
+Alinta
+Jannet Jones
+28 Connell St Orford TAS
+10.07
+28
+106100
+106764
+0.37
+510
+0.33
+0.90
+
+Phone
+Alinta
+Jannet Jones
+28 Connell St Orford TAS
+19.28
+31
+270
+0.09
+244
+0.22
+0.34
+
+Elect
+Origin
+Karen Lee
+85 Dingo St Dunwich NT
+-8.15
+31
+115843
+116489
+0.37
+525
+0.34
+0.87
+
+Elect
+Alinta
+Thomas Baker
+63 Joy St Croydon NSW
+10.27
+28
+111455
+112047
+0.27
+510
+0.32
+0.80
+
+Elect
+Dodo
+Helen Green
+36 Willey Rd Exeter SA
+3.48
+30
+121101
+121709
+0.33
+525
+0.29
+0.90
+
+Elect
+EA
+Sandra Davis
+83 Rose Ave Everton NSW
+-17.19
+29
+108087
+108629
+0.39
+505
+0.36
+0.97
+
+Gas
+Click
+David Thomas
+21 Peace Ave Hamper TAS
+-5.85
+31
+14103
+14179
+39.20
+0.032
+0.50
+
+Gas
+Dodo
+Brian Baker
+27 Dingo St Harrow NT
+23.63
+28
+16708
+16756
+39.80
+0.032
+0.68
+
+Elect
+Origin
+Edward Black
+92 John St Chelsea VIC
+1.54
+30
+130040
+130632
+0.34
+530
+0.32
+0.94
+
+Elect
+Alinta
+Steven Perez
+5 Broke St Otford VIC
+2.65
+29
+112301
+112716
+0.37
+515
+0.39
+0.96
+
+Gas
+Alinta
+Steven Perez
+5 Broke St Otford VIC
+0.13
+31
+16458
+16510
+38.80
+0.039
+0.50
+
+Elect
+Dodo
+Jill Wright
+94 Joy St Gatton VIC
+26.59
+29
+107737
+108524
+0.35
+545
+0.36
+0.86
+
+Elect
+Dodo
+Kevin Hall
+5 Joy St Milton NSW
+-15.76
+31
+131555
+132164
+0.35
+500
+0.33
+0.84
+
+Elect
+EA
+Mary Carter
+17 Willey Rd Epping SA
+-5.67
+30
+121009
+121524
+0.34
+510
+0.31
+0.90
+
+Phone
+Alinta
+Steven Perez
+5 Broke St Otford VIC
+-15.01
+28
+348
+0.11
+226
+0.32
+0.48
+
+Phone
+Red
+Karen Lopez
+53 Joy St Chelsea WA
+-19.48
+31
+246
+0.08
+224
+0.21
+0.48
+
+Gas
+Alinta
+Carol Hall
+1 John St Dutton NSW
+20.54
+31
+11830
+11871
+38.10
+0.038
+0.56
+
+Phone
+Alinta
+Carol Hall
+1 John St Dutton NSW
+-15.85
+29
+395
+0.05
+221
+0.33
+0.45
+
+Gas
+Dodo
+James Martin
+27 Rose Ave Windsor VIC
+19.58
+30
+13208
+13262
+38.40
+0.031
+0.52
+
+Phone
+AGL
+Jill Taylor
+5 Rose Ave Euston VIC
+20.51
+31
+209
+0.08
+290
+0.24
+0.33
+
+Elect
+Alinta
+Carol Hall
+1 John St Dutton NSW
+-11.74
+29
+123981
+124776
+0.25
+545
+0.26
+0.82
+
+Phone
+Alinta
+Nancy Scott
+63 Dingo St Heywood QLD
+17.12
+30
+368
+0.10
+233
+0.21
+0.33
+
+Elect
+Red
+Ronald Moore
+60 John St Glossop QLD
+21.83
+31
+131556
+132340
+0.29
+515
+0.33
+0.94
+
+Gas
+Origin
+Kevin King
+15 Dingo St Loxton SA
+15.41
+29
+12215
+12277
+38.40
+0.037
+0.54
+
+Phone
+AGL
+David Turner
+97 Joy St Hamper SA
+4.10
+28
+383
+0.07
+223
+0.28
+0.32
+
+Elect
+Origin
+Daniel Miller
+43 Dingo St Windsor SA
+22.42
+30
+105080
+105874
+0.37
+515
+0.41
+0.81
+
+Elect
+Click
+Maria Thomas
+80 John St Malvern SA
+4.58
+28
+104300
+105025
+0.31
+545
+0.33
+0.82
+
+Elect
+Alinta
+Donna Green
+24 Rose Ave Gatton SA
+-21.58
+31
+127408
+128108
+0.33
+505
+0.38
+0.92
+
+Elect
+Dodo
+Donald Nelson
+79 Joy St Warwick SA
+-16.02
+28
+118359
+118805
+0.37
+520
+0.42
+0.97
+
+Gas
+Alinta
+Donna Green
+24 Rose Ave Gatton SA
+-12.13
+29
+15905
+15983
+38.40
+0.037
+0.62
+
+Phone
+Alinta
+Donna Green
+24 Rose Ave Gatton SA
+15.76
+29
+392
+0.09
+234
+0.31
+0.34
+
+Gas
+Alinta
+David Young
+95 Beach Rd Kempton SA
+-18.68
+29
+19658
+19701
+39.80
+0.035
+0.45
+
+Phone
+Dodo
+Ronald Young
+73 Peace Ave Clayton VIC
+23.14
+29
+306
+0.11
+289
+0.31
+0.37
+
+Gas
+EA
+Susan Young
+98 Beach Rd Heywood NT
+1.83
+29
+19126
+19199
+38.00
+0.032
+0.53
+
+Phone
+Red
+Robert Garcia
+36 Broke St Everton SA
+11.09
+28
+244
+0.05
+281
+0.23
+0.33
+
+Gas
+AGL
+Betty Perez
+6 Willey Rd Dalton NT
+18.74
+29
+10233
+10289
+38.60
+0.031
+0.50
+
+Gas
+Origin
+Edward Green
+76 John St Burnley NT
+-2.78
+29
+11596
+11655
+38.00
+0.038
+0.61
+
+Gas
+Red
+Tom Jim
+45 John St Chelsea VIC
+-2.37
+29
+14883
+14959
+39.40
+0.037
+0.55
+
+Gas
+Red
+Kevin Hall
+59 Peace Ave Loxton NSW
+-9.30
+31
+16910
+16989
+38.40
+0.030
+0.58
+
+Elect
+EA
+Nancy Jones
+45 Broke St Osborne VIC
+2.99
+31
+125416
+126178
+0.30
+525
+0.32
+0.85
+
+Phone
+Dodo
+Donna Lewis
+4 Peace Ave Hanwood NT
+24.85
+30
+342
+0.12
+275
+0.33
+0.37
+
+Elect
+Dodo
+Jeff Adams
+5 Willey Rd Warwick SA
+-14.68
+28
+120149
+120563
+0.38
+500
+0.39
+0.91
+
+Gas
+EA
+Jill Nelson
+96 Beach Rd Burnley SA
+23.62
+30
+15097
+15173
+38.00
+0.038
+0.65
+
+Gas
+Click
+Donald Garcia
+60 Rose Ave Harrow QLD
+23.05
+30
+10619
+10689
+38.40
+0.030
+0.46
+
+Elect
+Origin
+Jannet Robert
+11 John St Belford SA
+-0.99
+29
+101678
+102118
+0.39
+520
+0.38
+0.83
+
+Elect
+AGL
+Jason Black
+32 Willey Rd Sydney VIC
+-2.36
+28
+121697
+122481
+0.30
+520
+0.32
+0.80
+
+Elect
+Alinta
+Karen King
+5 Connell St Malvern NT
+-15.50
+31
+103447
+103882
+0.32
+545
+0.31
+0.88
+
+Gas
+Dodo
+Joseph Davis
+50 Willey Rd Grafton TAS
+-6.84
+29
+10815
+10884
+38.80
+0.031
+0.64
+
+Elect
+AGL
+David Young
+66 Beach Rd Exford QLD
+-8.40
+29
+116299
+116870
+0.29
+530
+0.33
+0.91
+
+Elect
+Red
+Susan Miller
+65 Rose Ave Ilford NT
+9.30
+30
+105100
+105607
+0.39
+515
+0.37
+0.81
+
+Elect
+Alinta
+Paul Green
+9 Peace Ave Dutton SA
+-2.56
+31
+110290
+110828
+0.39
+520
+0.42
+0.90
+
+Phone
+Click
+Karen Young
+50 Rose Ave Kempton NSW
+0.62
+30
+272
+0.11
+240
+0.31
+0.35
+
+Gas
+Alinta
+Karen King
+5 Connell St Malvern NT
+15.23
+30
+16187
+16248
+39.40
+0.038
+0.57
+
+Elect
+Origin
+Donald Martin
+81 John St Bookham VIC
+-15.64
+28
+108209
+108724
+0.38
+525
+0.38
+0.90
+
+Gas
+Click
+Maria Young
+27 Peace Ave Hammond TAS
+-13.71
+30
+18750
+18793
+38.10
+0.030
+0.64
+
+Elect
+Dodo
+Sandra Willey
+31 John St Gatton WA
+18.31
+28
+108376
+109013
+0.27
+515
+0.24
+0.91
+
+Gas
+Dodo
+Brian Robert
+74 Willey Rd Exford VIC
+-7.56
+28
+14930
+14990
+39.00
+0.038
+0.67
+
+Gas
+EA
+Donald Robert
+62 Joy St Otford TAS
+-12.92
+31
+19108
+19163
+39.80
+0.031
+0.69
+
+Gas
+AGL
+Karen Baker
+22 Connell St Grafton QLD
+4.95
+30
+11536
+11609
+38.50
+0.031
+0.59
+
+Elect
+Dodo
+Brian Robert
+74 Willey Rd Exford VIC
+19.44
+29
+124957
+125670
+0.34
+530
+0.39
+0.86
+
+Elect
+Alinta
+David Green
+53 Willey Rd Dunwich WA
+-17.52
+30
+106400
+107120
+0.34
+515
+0.34
+0.80
+
+Gas
+Origin
+Tom Thomas
+45 John St Burton SA
+3.90
+30
+11501
+11574
+38.20
+0.032
+0.49
+
+Gas
+Click
+Karen Jones
+16 Connell St NewhamWinton QLD
+-1.31
+29
+18377
+18453
+38.40
+0.039
+0.56
+
+Elect
+Dodo
+Jannet Carter
+84 Dingo St Barnes QLD
+-6.03
+30
+130874
+131419
+0.38
+545
+0.36
+0.95
+
+Gas
+AGL
+Thomas Thomas
+10 Connell St Malvern QLD
+14.63
+31
+11812
+11878
+38.50
+0.036
+0.67
+
+Elect
+Red
+James Lee
+81 Peace Ave Sydney WA
+13.56
+28
+105164
+105620
+0.33
+505
+0.35
+0.85
+
+Phone
+Dodo
+Brian Robert
+74 Willey Rd Exford VIC
+-21.30
+28
+240
+0.05
+264
+0.34
+0.32
+
+Elect
+Click
+David Crowe
+34 Rose Ave Burton QLD
+23.80
+29
+113574
+114098
+0.38
+535
+0.39
+0.83
+
+Phone
+Alinta
+Karen King
+5 Connell St Malvern NT
+23.61
+31
+283
+0.13
+281
+0.29
+0.47
+
+Phone
+Origin
+Helen Crowe
+3 Joy St Harrow QLD
+4.32
+30
+217
+0.10
+290
+0.28
+0.36
+
+Elect
+Click
+Carol Harris
+85 Peace Ave Horsham TAS
+-2.77
+28
+114555
+115295
+0.31
+545
+0.34
+0.89
+
+Phone
+Click
+Nancy Adams
+28 Connell St Warwick NSW
+-9.25
+30
+209
+0.06
+225
+0.33
+0.44
+
+Phone
+Alinta
+Maria Rao
+14 Rose Ave Dunwich SA
+1.88
+28
+234
+0.13
+298
+0.21
+0.32
+
+Elect
+AGL
+Linda Martin
+26 Rose Ave Copley TAS
+3.06
+30
+113735
+114425
+0.25
+535
+0.22
+0.94
+
+Elect
+Red
+David King
+58 John St Dalby NT
+-5.82
+30
+101401
+102180
+0.32
+525
+0.36
+0.80
+
+Phone
+AGL
+Donald Taylor
+82 Broke St Euston NSW
+-2.16
+29
+347
+0.08
+293
+0.21
+0.37
+
+Phone
+Dodo
+Maria Turner
+35 Broke St Grafton SA
+15.74
+30
+209
+0.14
+249
+0.25
+0.35
+
+Gas
+Click
+Ronald Baker
+1 John St Euston NT
+-16.95
+28
+10129
+10208
+39.80
+0.030
+0.66
+
+Gas
+AGL
+Betty Rao
+27 John St Copley QLD
+-13.23
+28
+10996
+11053
+39.70
+0.030
+0.51
+
+Gas
+Dodo
+Jason Lee
+25 Dingo St Gatton WA
+-20.13
+30
+12305
+12381
+39.30
+0.037
+0.65
+
+Phone
+Dodo
+Donald Black
+33 Willey Rd Redhill TAS
+12.80
+29
+345
+0.06
+231
+0.26
+0.41
+
+Elect
+Alinta
+George Taylor
+21 Joy St Barnes WA
+-10.86
+30
+102611
+103025
+0.32
+530
+0.36
+0.97
+
+Gas
+Red
+Betty Wright
+6 John St Barham WA
+17.38
+30
+18133
+18173
+38.50
+0.035
+0.60
+
+Gas
+EA
+George Willey
+79 Connell St Malvern WA
+18.74
+31
+10700
+10740
+38.60
+0.034
+0.66
+
+Phone
+Alinta
+Thomas Martin
+95 Rose Ave Dunwich TAS
+-18.20
+29
+287
+0.09
+297
+0.38
+0.35
+
+Gas
+Alinta
+James Nelson
+15 Peace Ave Ilford VIC
+-14.72
+31
+17739
+17780
+38.80
+0.037
+0.51
+
+Elect
+Alinta
+Mary Hill
+37 Beach Rd Hamper VIC
+-19.85
+29
+129883
+130516
+0.35
+520
+0.40
+0.93
+
+Gas
+Click
+Betty Green
+56 John St Milton VIC
+-13.50
+28
+11560
+11626
+38.50
+0.033
+0.64
+
+Gas
+EA
+Sandra Harris
+15 Willey Rd Dutton SA
+-10.42
+30
+10731
+10805
+38.80
+0.038
+0.51
+
+Elect
+Click
+Maria Baker
+21 Broke St NewhamWinton TAS
+-21.93
+30
+131644
+132170
+0.38
+515
+0.38
+0.89
+
+Phone
+Red
+Lisa Lopez
+95 Joy St Hamper WA
+-12.69
+31
+365
+0.10
+204
+0.31
+0.40
+
+Gas
+Origin
+Betty Jones
+12 Connell St Dalby VIC
+3.28
+28
+13281
+13328
+39.30
+0.039
+0.56
+
+Elect
+Alinta
+Karen Jones
+54 Willey Rd Otford TAS
+23.06
+31
+114649
+115196
+0.39
+525
+0.43
+0.90
+
+Gas
+AGL
+Mark Miller
+87 Beach Rd Clifton QLD
+12.22
+28
+18972
+19029
+39.70
+0.031
+0.52
+
+Elect
+EA
+Helen Thomas
+75 Broke St Milton NSW
+7.73
+28
+103413
+104048
+0.29
+540
+0.34
+0.87
+
+Phone
+EA
+Brian Wilson
+47 Joy St Clayton TAS
+-19.84
+31
+394
+0.08
+259
+0.22
+0.49
+
+Phone
+Dodo
+Karen Rao
+65 Connell St Dutton WA
+4.61
+28
+346
+0.08
+266
+0.35
+0.38
+
+Phone
+EA
+Laura Lopez
+93 John St Exeter VIC
+3.15
+31
+305
+0.08
+211
+0.29
+0.48
+
+Elect
+Dodo
+Sharon Adams
+27 Joy St Penrose NT
+-2.08
+29
+118692
+119124
+0.31
+505
+0.36
+0.90
+
+Elect
+EA
+David Black
+39 Broke St Copley NT
+-0.73
+29
+108287
+109009
+0.29
+545
+0.29
+0.80
+
+Elect
+Red
+Donald Davis
+29 John St Dutton WA
+15.94
+31
+108520
+109188
+0.29
+540
+0.28
+0.80
+
+Gas
+Click
+Maria Clark
+34 John St Ipswich QLD
+13.57
+30
+11399
+11465
+38.30
+0.039
+0.64
+
+Gas
+EA
+Maria Walker
+65 Peace Ave Hammond NT
+7.50
+29
+15638
+15704
+38.20
+0.038
+0.46
+
+Gas
+Red
+David Young
+47 John St Glossop SA
+-10.15
+31
+15213
+15277
+39.40
+0.036
+0.55
+
+Elect
+Click
+Linda Lewis
+54 Peace Ave Dalby TAS
+23.64
+31
+101766
+102184
+0.31
+520
+0.30
+0.88
+
+Gas
+Red
+Donna Wilson
+48 Willey Rd Loxton QLD
+25.24
+28
+13161
+13238
+39.80
+0.030
+0.61
+
+Gas
+Origin
+Lisa Nelson
+15 Rose Ave Barham SA
+-3.15
+29
+14816
+14886
+39.20
+0.030
+0.54
+
+Elect
+Alinta
+Ruth Wright
+2 John St Malvern VIC
+-1.72
+29
+129331
+130028
+0.37
+540
+0.38
+0.91
+
+Gas
+Dodo
+Mary Lopez
+58 Connell St Redhill WA
+7.11
+31
+19515
+19590
+39.30
+0.036
+0.65
+
+Elect
+EA
+Jeff Clark
+69 Joy St Epping QLD
+-14.94
+30
+121858
+122645
+0.37
+545
+0.42
+0.86
+
+Elect
+Alinta
+John Hall
+96 Willey Rd Everton NT
+-6.45
+29
+128481
+128957
+0.29
+545
+0.31
+0.95
+
+Phone
+Click
+Thomas Moore
+12 Joy St Ilford NT
+-6.89
+31
+304
+0.08
+283
+0.24
+0.33
+
+Elect
+Click
+Jannet Walker
+90 Peace Ave Bexhill VIC
+-2.35
+28
+124300
+125012
+0.33
+520
+0.30
+0.99
+
+Gas
+Dodo
+George Nelson
+84 John St Milton WA
+23.34
+31
+18299
+18358
+38.70
+0.039
+0.55
+
+Phone
+Dodo
+George Nelson
+84 John St Milton WA
+-14.76
+30
+388
+0.08
+216
+0.22
+0.38
+
+Gas
+EA
+George Willey
+27 Broke St Everton TAS
+8.24
+31
+16369
+16445
+39.60
+0.034
+0.56
+
+Phone
+Click
+David Lopez
+98 Willey Rd Hamper TAS
+-2.41
+31
+252
+0.12
+284
+0.24
+0.35
+
+Phone
+Alinta
+Paul Moore
+33 Peace Ave Barham NSW
+24.35
+30
+309
+0.09
+202
+0.38
+0.31
+
+Elect
+Dodo
+George Nelson
+84 John St Milton WA
+-2.38
+30
+109818
+110278
+0.27
+505
+0.32
+0.99
+
+Gas
+Click
+Carol Clark
+41 Peace Ave Loxton SA
+14.98
+29
+12600
+12642
+38.60
+0.031
+0.69
+
+Gas
+Click
+Susan Hill
+16 John St Chelsea TAS
+10.28
+28
+17704
+17765
+39.40
+0.034
+0.63
+
+Phone
+Dodo
+Joseph Lopez
+3 Rose Ave Bookham SA
+-19.23
+28
+209
+0.08
+213
+0.38
+0.31
+
+Gas
+Click
+Maria Taylor
+52 Beach Rd Kendall SA
+1.55
+31
+16813
+16883
+39.50
+0.039
+0.53
+
+Gas
+Alinta
+Ruth Lewis
+96 Connell St Everton TAS
+-11.04
+30
+12411
+12482
+39.30
+0.039
+0.53
+
+Gas
+Alinta
+Jannet Taylor
+74 Joy St Barnes SA
+-4.58
+29
+17720
+17781
+39.50
+0.039
+0.55
+
+Gas
+AGL
+Helen Carter
+18 Willey Rd Osborne VIC
+19.17
+30
+11521
+11570
+39.40
+0.039
+0.63
+
+Gas
+Dodo
+Jeff Nelson
+45 Connell St Heywood NT
+-10.89
+28
+13937
+14005
+38.80
+0.039
+0.68
+
+Elect
+Origin
+David Nelson
+49 Peace Ave Ipswich NSW
+-16.59
+30
+122007
+122719
+0.35
+545
+0.36
+0.91
+
+Gas
+Dodo
+Jeff Jones
+83 Beach Rd Hanwood QLD
+-1.85
+28
+11231
+11276
+39.10
+0.033
+0.50
+
+Gas
+Origin
+David Adams
+52 Connell St Redhill TAS
+-22.42
+30
+16055
+16107
+39.80
+0.035
+0.63
+
+Gas
+Red
+Edward Harris
+93 Rose Ave Everton WA
+-6.52
+31
+13738
+13816
+39.50
+0.038
+0.61
+
+Elect
+EA
+David Carter
+72 Joy St Exford TAS
+25.38
+31
+101447
+102228
+0.29
+545
+0.28
+0.80
+
+Phone
+Dodo
+David Jones
+63 Beach Rd Orford SA
+-20.79
+31
+291
+0.13
+273
+0.39
+0.39
+
+Phone
+Click
+Ruth Black
+32 Dingo St Exeter SA
+11.53
+28
+211
+0.14
+270
+0.36
+0.32
+
+Phone
+AGL
+Lisa Wilson
+36 John St Gatton SA
+-15.19
+29
+230
+0.14
+288
+0.35
+0.43
+
+Gas
+Dodo
+Donna Jones
+50 Broke St Oxley NSW
+5.88
+31
+19400
+19477
+38.30
+0.035
+0.51
+
+Phone
+EA
+Paul Lopez
+89 Joy St Malvern SA
+-14.12
+30
+297
+0.11
+258
+0.38
+0.37
+
+Gas
+Origin
+Lisa Black
+89 Broke St Clifton VIC
+-16.04
+30
+19844
+19916
+39.20
+0.038
+0.57
+
+Gas
+Alinta
+Susan Miller
+31 John St Hammond NT
+11.19
+31
+12773
+12819
+38.50
+0.034
+0.46
+
+Gas
+Click
+Thomas Thomas
+77 Joy St Epping WA
+2.24
+28
+11366
+11419
+38.30
+0.032
+0.57
+
+Phone
+Click
+Donna Adams
+61 John St Ilford NT
+13.42
+28
+260
+0.09
+234
+0.22
+0.36
+
+Phone
+Alinta
+George Hill
+50 Peace Ave Malvern WA
+-15.77
+29
+391
+0.09
+217
+0.23
+0.45
+
+Gas
+Origin
+Joseph Smith
+93 John St Euston WA
+-17.63
+29
+11650
+11695
+38.30
+0.038
+0.45
+
+Elect
+Click
+Betty Moore
+82 Beach Rd Epping QLD
+-20.95
+31
+110327
+110980
+0.32
+525
+0.32
+0.89
+
+Phone
+AGL
+Steven Garcia
+2 Joy St Barham NSW
+4.73
+30
+358
+0.06
+262
+0.22
+0.30
+
+Elect
+Dodo
+Brian Green
+22 Willey Rd Orford VIC
+-4.48
+30
+123961
+124709
+0.25
+530
+0.27
+0.92
+
+Gas
+Alinta
+George Walker
+51 Dingo St Toronto TAS
+2.80
+29
+16462
+16516
+39.40
+0.032
+0.59
+
+Elect
+Origin
+George Robert
+27 Dingo St Orford QLD
+-7.81
+29
+115971
+116531
+0.25
+520
+0.27
+0.85
+
+Gas
+Dodo
+Lisa Willey
+77 Rose Ave Epping NT
+25.02
+30
+13248
+13313
+39.40
+0.035
+0.62
+
+Gas
+Click
+Laura Baker
+21 Peace Ave Dunwich WA
+-14.19
+30
+17631
+17708
+38.70
+0.035
+0.63
+
+Elect
+Alinta
+Jill Green
+90 Broke St Burnley VIC
+-18.25
+28
+126664
+127264
+0.38
+530
+0.43
+0.84
+
+Elect
+Alinta
+Jeff Evans
+83 Broke St Epping TAS
+19.75
+31
+109126
+109550
+0.32
+535
+0.31
+0.81
+
+Elect
+AGL
+Tom Perez
+93 Dingo St Loxton NT
+-11.02
+28
+105728
+106434
+0.31
+545
+0.36
+0.80
+
+Elect
+Dodo
+Joseph Hall
+47 Rose Ave Croydon NSW
+-12.01
+30
+119375
+120155
+0.37
+510
+0.35
+0.84
+
+Elect
+AGL
+Jeff Turner
+40 Broke St Kempton WA
+24.09
+28
+109262
+110039
+0.32
+535
+0.31
+0.80
+
+Phone
+EA
+George Scott
+83 Rose Ave Copley SA
+-4.10
+30
+236
+0.11
+209
+0.24
+0.40
+
+Elect
+Alinta
+Mark Miller
+48 Willey Rd Ipswich WA
+-19.77
+28
+126525
+127016
+0.28
+535
+0.27
+0.92
+
+Phone
+Red
+Paul Thomas
+14 Peace Ave Harrow TAS
+7.34
+29
+230
+0.14
+217
+0.32
+0.49
+
+Phone
+Origin
+Mark Garcia
+19 Willey Rd Belford SA
+-1.17
+28
+393
+0.07
+275
+0.35
+0.30
+
+Phone
+Alinta
+James Rao
+87 John St Otford QLD
+17.60
+28
+220
+0.10
+252
+0.38
+0.45
+
+Gas
+Dodo
+David White
+51 Beach Rd Barnes VIC
+-17.97
+29
+11374
+11425
+38.10
+0.034
+0.58
+
+Elect
+Red
+George Clark
+55 Peace Ave Bookham TAS
+-15.61
+30
+106629
+107418
+0.33
+540
+0.33
+0.80
+
+Gas
+EA
+Ruth Hill
+19 Rose Ave Copley NSW
+-21.69
+28
+16941
+17020
+39.30
+0.036
+0.66
+
+Gas
+Click
+Laura Carter
+69 Rose Ave Euston TAS
+-16.79
+29
+13729
+13769
+39.20
+0.037
+0.46
+
+Elect
+Dodo
+Karen Green
+93 Broke St Dutton NSW
+9.13
+31
+126665
+127308
+0.31
+535
+0.31
+0.88
+
+Gas
+Click
+David Harris
+78 Dingo St Dalby WA
+-4.51
+29
+10095
+10164
+38.60
+0.030
+0.60
+
+Elect
+EA
+Mary Baker
+50 Willey Rd Copley TAS
+4.25
+30
+126508
+127200
+0.28
+510
+0.33
+0.84
+
+Phone
+Click
+David Baker
+7 Broke St Gatton QLD
+19.39
+29
+328
+0.12
+280
+0.36
+0.48
+
+Elect
+Click
+Karen Turner
+84 Peace Ave Bookham TAS
+5.81
+29
+116345
+117125
+0.32
+545
+0.31
+0.80
+
+Gas
+Alinta
+Laura Scott
+87 Joy St Grafton NT
+-5.96
+30
+12309
+12366
+38.40
+0.037
+0.46
+
+Gas
+Origin
+Kevin Wright
+13 Connell St Chelsea WA
+15.99
+28
+15582
+15632
+38.80
+0.034
+0.67
+
+Gas
+Red
+David King
+97 Dingo St Croydon SA
+20.96
+29
+14943
+14996
+39.70
+0.038
+0.48
+
+Phone
+AGL
+Donna Lopez
+19 John St Burton SA
+-13.07
+28
+240
+0.14
+261
+0.32
+0.48
+
+Gas
+EA
+Tom Crowe
+44 Dingo St Barnes WA
+-13.72
+31
+16804
+16848
+39.90
+0.034
+0.69
+
+Gas
+AGL
+Susan Green
+17 John St Heywood SA
+-7.82
+28
+18385
+18441
+38.30
+0.031
+0.57
+
+Gas
+EA
+Edward Brown
+17 Dingo St Heywood NSW
+-12.54
+29
+13998
+14040
+39.40
+0.032
+0.62
+
+Phone
+Origin
+James Wright
+99 Beach Rd Malvern SA
+-19.66
+31
+342
+0.06
+262
+0.24
+0.31
+
+Phone
+Red
+Thomas Green
+1 Rose Ave Dutton QLD
+-4.04
+31
+345
+0.13
+259
+0.23
+0.30
+
+Gas
+Alinta
+Robert White
+7 Peace Ave Windsor WA
+-13.92
+31
+19286
+19365
+39.80
+0.031
+0.45
+
+Phone
+Origin
+Joseph Robert
+19 John St Burton WA
+14.16
+31
+387
+0.10
+252
+0.29
+0.48
+
+Gas
+Dodo
+Laura Green
+59 Rose Ave Harrow SA
+-19.29
+28
+12004
+12079
+39.40
+0.038
+0.62
+
+Elect
+Alinta
+George Thomas
+37 John St Otford WA
+-4.07
+28
+130844
+131564
+0.28
+500
+0.33
+0.91
+
+Elect
+AGL
+George Carter
+15 Willey Rd Ilford QLD
+19.33
+29
+132183
+132715
+0.31
+540
+0.30
+0.95
+
+Elect
+Alinta
+Edward Carter
+5 Willey Rd Loxton WA
+-18.13
+31
+105523
+106074
+0.37
+500
+0.36
+0.94
+
+Elect
+Dodo
+Tom Moore
+94 Connell St Dalby TAS
+13.81
+29
+113883
+114301
+0.31
+515
+0.27
+0.85
+
+Phone
+AGL
+Paul Perez
+36 Peace Ave Hammond NSW
+-19.72
+31
+278
+0.05
+282
+0.30
+0.39
+
+Gas
+EA
+Sandra Crowe
+42 John St Barham QLD
+-22.25
+29
+17778
+17827
+38.40
+0.033
+0.55
+
+Elect
+AGL
+Linda Green
+60 Peace Ave  TAS
+-13.60
+31
+120748
+121427
+0.35
+500
+0.32
+0.96
+
+Phone
+Click
+Sarah Baker
+70 Beach Rd Toronto SA
+-22.40
+31
+214
+0.12
+240
+0.21
+0.45
+
+Phone
+Click
+Jill Perez
+85 John St Warwick VIC
+8.35
+28
+296
+0.10
+265
+0.35
+0.34
+
+Phone
+Dodo
+Daniel Robert
+60 Broke St Heywood WA
+-3.06
+28
+363
+0.10
+241
+0.30
+0.46
+
+Elect
+EA
+David Black
+77 Joy St Barnes SA
+-8.80
+31
+108824
+109237
+0.27
+540
+0.30
+0.97
+
+Elect
+Origin
+Robert Carter
+28 Rose Ave Horsham TAS
+2.79
+30
+106260
+106879
+0.32
+535
+0.28
+0.81
+
+Phone
+AGL
+Bill Evans
+61 Peace Ave Warwick NT
+3.69
+30
+201
+0.13
+257
+0.38
+0.30
+
+Phone
+AGL
+Robert Jones
+34 Peace Ave Warwick QLD
+-9.93
+28
+392
+0.05
+298
+0.39
+0.36
+
+Elect
+Alinta
+Bill Miller
+9 Broke St Burnley SA
+27.33
+31
+105262
+105672
+0.30
+530
+0.32
+0.90
+
+Phone
+Dodo
+Sarah Brown
+7 Joy St Bexhill NSW
+-3.88
+31
+219
+0.08
+235
+0.34
+0.36
+
+Gas
+EA
+Edward Clark
+90 Willey Rd Everton NT
+-11.01
+31
+19909
+19964
+38.60
+0.035
+0.49
+
+Elect
+Click
+Sharon Walker
+41 Connell St Ipswich WA
+21.99
+31
+130205
+130890
+0.32
+535
+0.32
+0.89
+
+Phone
+Alinta
+Jannet Lee
+76 Connell St Heywood NT
+-18.99
+31
+337
+0.14
+255
+0.35
+0.40
+
+Elect
+Click
+John Jones
+94 Joy St Bexhill WA
+-15.27
+28
+120812
+121572
+0.28
+535
+0.28
+0.96
+
+Phone
+AGL
+Ruth Baker
+75 Peace Ave Malvern SA
+4.16
+31
+212
+0.13
+211
+0.29
+0.42
+
+Elect
+EA
+Karen Hall
+4 Willey Rd Otford VIC
+17.65
+31
+112846
+113380
+0.26
+505
+0.22
+0.99
+
+Phone
+Alinta
+David Wright
+69 Peace Ave Glossop TAS
+-13.95
+30
+217
+0.06
+277
+0.27
+0.39
+
+Gas
+EA
+Jason Nelson
+99 Peace Ave Windsor NT
+12.22
+29
+12333
+12375
+39.00
+0.039
+0.64
+
+Phone
+Alinta
+Steven Robert
+15 Peace Ave Kempton WA
+17.97
+29
+357
+0.13
+280
+0.26
+0.36
+
+Phone
+Click
+Sarah Lopez
+92 John St Burton TAS
+16.63
+30
+347
+0.07
+206
+0.30
+0.34
+
+Gas
+Alinta
+Mark Jim
+9 Connell St Windsor NT
+24.32
+29
+10350
+10403
+39.80
+0.037
+0.47
+
+Elect
+Click
+Donald Turner
+74 Broke St Penrose VIC
+-18.81
+29
+112201
+112672
+0.39
+515
+0.43
+0.86
+
+Phone
+AGL
+Maria Young
+25 Dingo St Epping NSW
+6.89
+30
+309
+0.10
+238
+0.35
+0.34
+
+Gas
+Dodo
+Maria Garcia
+90 Joy St Croydon VIC
+15.61
+31
+17256
+17298
+39.70
+0.039
+0.56
+
+Elect
+EA
+Sarah Nelson
+31 Beach Rd Osborne SA
+12.76
+30
+120632
+121187
+0.25
+530
+0.23
+0.92
+
+Phone
+Alinta
+Mary Lee
+2 Dingo St Clayton VIC
+-19.80
+28
+286
+0.12
+265
+0.39
+0.39
+
+Gas
+Click
+Susan Evans
+63 Rose Ave Dutton WA
+-12.29
+29
+18866
+18907
+39.40
+0.035
+0.48
+
+Elect
+AGL
+Maria Nelson
+24 Dingo St Euston SA
+-3.77
+28
+119015
+119777
+0.37
+505
+0.40
+0.82
+
+Gas
+AGL
+Tom Green
+35 Joy St Malvern WA
+26.81
+28
+18009
+18077
+38.00
+0.032
+0.68
+
+Elect
+Click
+Nancy Jones
+8 Beach Rd Exeter SA
+-16.93
+30
+125677
+126132
+0.28
+525
+0.29
+0.80
+
+Elect
+Red
+Thomas Scott
+20 Willey Rd Croydon VIC
+17.48
+28
+107097
+107500
+0.31
+545
+0.36
+0.85
+
+Elect
+Alinta
+Karen Wright
+5 Joy St Kempton NSW
+0.95
+31
+111377
+111899
+0.28
+510
+0.29
+0.86
+
+Gas
+Dodo
+Ruth Evans
+34 Rose Ave Exford TAS
+7.48
+28
+18298
+18375
+38.90
+0.038
+0.50
+
+Phone
+Dodo
+Ruth Evans
+34 Rose Ave Exford TAS
+-5.56
+28
+394
+0.06
+240
+0.35
+0.45
+
+Phone
+EA
+Sandra Lee
+43 Joy St Belford VIC
+21.07
+31
+275
+0.06
+231
+0.33
+0.47
+
+Gas
+Red
+Paul Wilson
+85 Willey Rd Croydon NSW
+-16.72
+31
+10275
+10319
+38.40
+0.038
+0.61
+
+Gas
+Alinta
+Helen Perez
+87 Dingo St Glossop SA
+-7.70
+31
+12981
+13025
+38.10
+0.034
+0.46
+
+Phone
+AGL
+Robert Turner
+5 Beach Rd Bookham WA
+11.44
+29
+327
+0.14
+281
+0.21
+0.40
+
+Elect
+Dodo
+Ruth Evans
+34 Rose Ave Exford TAS
+-15.21
+28
+103471
+104014
+0.37
+500
+0.36
+0.91
+
+Phone
+EA
+Kevin Thomas
+64 Connell St Exford NT
+-8.73
+31
+288
+0.11
+202
+0.35
+0.32
+
+Elect
+EA
+James Lee
+47 Broke St Ilford VIC
+19.61
+28
+114984
+115391
+0.28
+525
+0.28
+0.88
+
+Gas
+Origin
+Linda Thomas
+32 Joy St Hanwood VIC
+-9.20
+30
+12826
+12887
+38.20
+0.032
+0.66
+
+Phone
+AGL
+David Davis
+2 Willey Rd Dutton NSW
+6.54
+31
+340
+0.05
+241
+0.21
+0.38
+
+Phone
+EA
+Kevin Lopez
+21 John St Burnley TAS
+21.82
+29
+319
+0.14
+244
+0.25
+0.34
+
+Gas
+AGL
+Linda Rao
+13 Broke St Hamper NT
+13.32
+30
+16269
+16341
+38.00
+0.033
+0.65
+
+Phone
+Red
+Sharon Clark
+56 Connell St Penrose NSW
+-16.21
+29
+345
+0.11
+237
+0.34
+0.48
+
+Elect
+EA
+Karen Evans
+26 Rose Ave Copley NT
+-1.80
+30
+101693
+102143
+0.33
+525
+0.29
+0.91
+
+Elect
+AGL
+Joseph Wilson
+23 Connell St Bexhill NSW
+-8.03
+28
+132088
+132707
+0.33
+505
+0.32
+0.91
+
+Phone
+AGL
+Donna Perez
+72 Connell St Malvern WA
+22.62
+30
+335
+0.08
+223
+0.39
+0.31
+
+Phone
+Click
+Donna Rao
+82 Peace Ave Copley WA
+20.20
+29
+284
+0.08
+269
+0.33
+0.36
+
+Phone
+Origin
+Ronald Adams
+22 Rose Ave Toronto NT
+23.22
+29
+268
+0.12
+221
+0.32
+0.45
+
+Phone
+Alinta
+Ruth Adams
+78 Connell St Barham SA
+-6.19
+29
+270
+0.11
+248
+0.31
+0.49
+
+Gas
+Alinta
+Bill Clark
+12 Rose Ave Burnley WA
+-1.72
+29
+11124
+11169
+39.20
+0.037
+0.60
+
+Gas
+AGL
+Jason Carter
+62 Broke St Chelsea NSW
+-11.78
+28
+13891
+13936
+38.00
+0.037
+0.45
+
+Phone
+Click
+Donald Taylor
+85 Willey Rd Horsham NSW
+0.73
+29
+334
+0.14
+255
+0.30
+0.48
+
+Elect
+Origin
+Lisa Taylor
+85 Peace Ave Oxley QLD
+7.23
+29
+125324
+125736
+0.34
+535
+0.34
+0.96
+
+Gas
+Origin
+Robert Garcia
+7 John St Exford SA
+16.45
+30
+19882
+19930
+38.00
+0.036
+0.69
+
+Phone
+Dodo
+Betty Clark
+23 John St Bexhill SA
+22.98
+28
+263
+0.12
+241
+0.33
+0.32
+
+Gas
+Origin
+Brian Scott
+88 Joy St Toronto VIC
+4.60
+30
+12484
+12543
+39.40
+0.032
+0.53
+
+Gas
+Origin
+Ruth Wilson
+71 Joy St Otford VIC
+9.41
+28
+12441
+12490
+38.60
+0.030
+0.68
+
+Gas
+Click
+Daniel Clark
+70 Peace Ave Warwick QLD
+-22.06
+28
+14363
+14434
+38.00
+0.039
+0.49
+
+Phone
+Alinta
+Donna Perez
+92 Joy St Kendall QLD
+-0.08
+30
+371
+0.06
+260
+0.30
+0.39
+
+Elect
+EA
+Linda Nelson
+99 John St Sydney NT
+-10.92
+30
+103725
+104216
+0.30
+545
+0.26
+0.98
+
+Phone
+Alinta
+Thomas Nelson
+54 John St  QLD
+6.27
+28
+347
+0.09
+216
+0.30
+0.42
+
+Gas
+Origin
+Jeff Lewis
+43 Rose Ave Everton QLD
+-11.71
+28
+15191
+15231
+39.00
+0.032
+0.58
+
+Elect
+AGL
+Mary Brown
+26 Joy St Barham NT
+1.39
+30
+117732
+118469
+0.32
+510
+0.33
+0.90
+
+Phone
+Click
+Sarah Carter
+18 Broke St Hanwood TAS
+15.35
+29
+270
+0.05
+206
+0.38
+0.39
+
+Elect
+EA
+Mary Adams
+38 Rose Ave Milton WA
+-20.97
+30
+115417
+116064
+0.28
+540
+0.27
+0.83
+
+Phone
+EA
+Sandra Clark
+81 Joy St Burton WA
+-8.01
+28
+345
+0.13
+219
+0.28
+0.31
+
+Gas
+Origin
+George Wright
+60 Beach Rd Sydney NSW
+-11.10
+30
+13359
+13414
+38.10
+0.038
+0.58
+
+Phone
+EA
+Karen Lewis
+99 Peace Ave Barham WA
+-20.43
+31
+237
+0.07
+200
+0.28
+0.34
+
+Elect
+Dodo
+Laura Evans
+11 John St Barnes QLD
+15.57
+29
+109782
+110433
+0.28
+500
+0.33
+0.96
+
+Phone
+Origin
+Lisa White
+19 Willey Rd Exeter NSW
+-19.19
+29
+361
+0.13
+289
+0.34
+0.45
+
+Elect
+Alinta
+Donald Evans
+97 Beach Rd Dutton QLD
+9.11
+29
+118269
+118711
+0.33
+500
+0.38
+0.85
+
+Elect
+AGL
+Bill Smith
+68 Dingo St Dalby WA
+-14.59
+29
+112453
+112869
+0.30
+540
+0.26
+0.92
+
+Elect
+EA
+Mark Wright
+95 Willey Rd Sydney SA
+20.36
+31
+121797
+122468
+0.31
+525
+0.28
+0.82
+
+Elect
+Red
+Susan Wright
+49 Rose Ave Grafton SA
+-17.76
+31
+102317
+103089
+0.29
+520
+0.26
+0.83
+
+Phone
+Red
+Helen Green
+66 Peace Ave Harrow VIC
+-5.15
+31
+271
+0.13
+253
+0.32
+0.39
+
+Elect
+Click
+Thomas Clark
+3 Rose Ave Bookham NT
+1.11
+30
+115324
+115735
+0.26
+540
+0.22
+0.80
+
+Gas
+Click
+Sarah Garcia
+6 Dingo St Ilford WA
+13.10
+30
+16701
+16760
+39.10
+0.036
+0.46
+
+Gas
+Dodo
+Jannet Taylor
+21 Peace Ave Ilford TAS
+10.73
+30
+11088
+11160
+39.50
+0.037
+0.62
+
+Gas
+Origin
+David Harris
+38 Dingo St Dunwich NSW
+-11.18
+31
+11176
+11226
+39.50
+0.037
+0.48
+
+Phone
+EA
+Paul Brown
+28 Willey Rd Exeter NT
+19.54
+30
+211
+0.08
+262
+0.20
+0.49
+
+Gas
+EA
+Nancy Turner
+87 Rose Ave Belford WA
+18.38
+29
+14893
+14972
+39.20
+0.033
+0.56
+
+Phone
+Click
+Carol Green
+35 John St Malvern QLD
+-13.69
+31
+214
+0.13
+273
+0.39
+0.32
+
+Elect
+Click
+David Martin
+74 Beach Rd Exeter NT
+13.38
+31
+108419
+108964
+0.32
+545
+0.36
+0.87
+
+Phone
+Red
+Ruth Willey
+79 John St Chelsea NT
+-15.65
+31
+276
+0.14
+213
+0.24
+0.30
+
+Gas
+Alinta
+Tom Miller
+97 Dingo St Oxley QLD
+-21.24
+29
+16206
+16271
+38.90
+0.038
+0.69
+
+Gas
+Red
+Tom Scott
+49 John St Hammond SA
+25.17
+31
+11403
+11466
+38.80
+0.037
+0.45
+
+Phone
+Alinta
+Karen White
+50 Dingo St Hammond NSW
+1.73
+29
+234
+0.14
+281
+0.20
+0.35
+
+Elect
+Origin
+Sarah Harris
+6 Peace Ave Bexhill WA
+11.60
+31
+122187
+122657
+0.31
+505
+0.32
+0.99
+
+Phone
+EA
+Helen Green
+36 Peace Ave Hanwood NT
+13.26
+31
+264
+0.08
+201
+0.33
+0.47
+
+Gas
+Click
+Jeff Jim
+30 Rose Ave Barham NT
+16.54
+29
+12423
+12497
+39.40
+0.035
+0.61
+
+Phone
+Alinta
+Sharon Garcia
+81 Connell St Oxley QLD
+-10.65
+31
+280
+0.05
+229
+0.39
+0.38
+
+Gas
+AGL
+Jill Jim
+64 Joy St Windsor WA
+-14.14
+28
+14549
+14593
+38.90
+0.036
+0.59
+
+Elect
+Origin
+Jeff Jones
+73 Connell St Everton WA
+-13.64
+30
+117879
+118482
+0.37
+500
+0.38
+0.84
+
+Elect
+Click
+Mark Smith
+99 Willey Rd Windsor QLD
+22.01
+31
+113284
+113859
+0.30
+545
+0.31
+0.98
+
+Elect
+AGL
+Donald Walker
+47 John St Everton SA
+2.76
+29
+106043
+106772
+0.28
+515
+0.27
+0.83
+
+Phone
+EA
+Jeff White
+67 Beach Rd Barnes VIC
+26.37
+29
+247
+0.10
+222
+0.27
+0.46
+
+Gas
+AGL
+Robert Carter
+98 Peace Ave Ilford SA
+27.36
+30
+19726
+19772
+38.20
+0.039
+0.45
+
+Elect
+Origin
+Jeff Jones
+8 Peace Ave Burton NT
+-2.60
+28
+131142
+131643
+0.31
+520
+0.35
+0.95
+
+Gas
+Dodo
+Helen Smith
+25 John St Barham QLD
+-0.41
+31
+19839
+19888
+38.90
+0.037
+0.55
+
+Gas
+Red
+George Scott
+7 Beach Rd  NSW
+-17.52
+28
+11690
+11752
+38.60
+0.037
+0.65
+
+Phone
+Red
+Paul Green
+80 Beach Rd Clayton TAS
+26.49
+28
+296
+0.09
+211
+0.22
+0.37
+
+Gas
+Origin
+Karen Rao
+13 Rose Ave Grafton SA
+-12.79
+31
+11596
+11654
+39.80
+0.030
+0.51
+
+Phone
+Dodo
+Karen Green
+34 Joy St Milton NSW
+-19.50
+29
+384
+0.08
+247
+0.36
+0.46
+
+Phone
+Dodo
+Mary Lee
+99 Peace Ave Copley SA
+-17.29
+31
+390
+0.09
+227
+0.29
+0.44
+
+Elect
+EA
+Donna Young
+13 Willey Rd Toronto TAS
+-15.66
+30
+117156
+117680
+0.38
+505
+0.43
+0.84
+
+Gas
+Alinta
+Jeff Turner
+29 Broke St Malvern SA
+21.12
+28
+15031
+15078
+38.80
+0.034
+0.60
+
+Gas
+Click
+Susan Garcia
+9 Dingo St Loxton QLD
+-0.28
+28
+19045
+19115
+38.00
+0.031
+0.63
+
+Phone
+Dodo
+David Green
+44 Rose Ave Croydon WA
+4.32
+28
+219
+0.12
+257
+0.21
+0.42
+
+Gas
+Click
+Sharon King
+31 Broke St Ipswich QLD
+9.51
+29
+13247
+13310
+38.30
+0.032
+0.57
+
+Gas
+Origin
+Nancy Walker
+97 John St Bexhill VIC
+23.78
+30
+10677
+10722
+38.90
+0.030
+0.62
+
+Phone
+Alinta
+Thomas Evans
+70 Rose Ave Everton WA
+25.93
+28
+311
+0.06
+229
+0.31
+0.48
+
+Gas
+Dodo
+Joseph Jones
+35 Beach Rd Hammond SA
+-3.34
+28
+13748
+13792
+38.50
+0.034
+0.58
+
+Elect
+Click
+Karen Wright
+34 Beach Rd Burnley NT
+4.67
+28
+102395
+102889
+0.26
+500
+0.31
+0.93
+
+Phone
+Origin
+Kevin King
+68 Dingo St Everton TAS
+23.03
+31
+341
+0.05
+295
+0.30
+0.48
+
+Gas
+Red
+James Young
+8 Dingo St Dalton QLD
+-13.49
+30
+14643
+14715
+39.30
+0.030
+0.58
+
+Phone
+Click
+Nancy Clark
+78 Connell St Milton VIC
+-5.02
+30
+395
+0.11
+292
+0.24
+0.34
+
+Gas
+Alinta
+Donald King
+20 Rose Ave Dalby VIC
+11.28
+28
+17060
+17110
+38.30
+0.037
+0.58
+
+Phone
+Origin
+David Willey
+90 Rose Ave Kempton QLD
+21.79
+31
+264
+0.05
+269
+0.24
+0.40
+
+Phone
+Alinta
+Maria Clark
+60 Dingo St Kempton VIC
+9.65
+29
+365
+0.06
+258
+0.39
+0.34
+
+Gas
+Dodo
+Ruth Rao
+29 John St Burton NSW
+23.52
+30
+10073
+10131
+38.50
+0.034
+0.57
+
+Gas
+Red
+Linda Green
+93 Broke St Heywood NSW
+-17.50
+28
+19486
+19564
+39.20
+0.039
+0.58
+
+Phone
+Origin
+Daniel Hall
+36 Rose Ave Exford TAS
+4.05
+29
+259
+0.07
+203
+0.25
+0.45
+
+Elect
+Alinta
+Karen Lee
+75 Rose Ave Everton NSW
+21.28
+29
+102146
+102823
+0.28
+535
+0.24
+0.81
+
+Elect
+Alinta
+Tom Green
+29 Peace Ave Sydney TAS
+-14.81
+31
+118919
+119497
+0.35
+500
+0.36
+0.96
+
+Gas
+Alinta
+Lisa Turner
+9 Willey Rd Ipswich VIC
+-3.31
+30
+11503
+11556
+39.60
+0.030
+0.63
+
+Phone
+Origin
+Daniel White
+36 Dingo St  TAS
+7.43
+30
+316
+0.06
+208
+0.35
+0.42
+
+Phone
+AGL
+Donna Evans
+83 Rose Ave Milton QLD
+-4.56
+28
+371
+0.08
+238
+0.36
+0.46
+
+Gas
+Click
+Kevin Carter
+27 John St Grafton WA
+27.18
+28
+12986
+13030
+39.20
+0.032
+0.54
+
+Phone
+Red
+Sarah Jones
+96 Dingo St Everton NT
+26.33
+31
+215
+0.09
+226
+0.24
+0.41
+
+Phone
+Origin
+Daniel Davis
+80 Peace Ave Copley TAS
+-12.81
+31
+320
+0.12
+235
+0.28
+0.48
+
+Phone
+Origin
+Karen Young
+52 John St  VIC
+-1.51
+30
+224
+0.09
+254
+0.32
+0.49
+
+Elect
+EA
+Sandra Lopez
+40 Dingo St Dalton WA
+-10.69
+31
+115735
+116456
+0.38
+520
+0.42
+0.87
+
+Phone
+Origin
+Kevin Carter
+12 Willey Rd Horsham NT
+3.68
+30
+269
+0.10
+240
+0.22
+0.47
+
+Elect
+Alinta
+Bill Miller
+96 Peace Ave Osborne QLD
+-10.45
+28
+107715
+108301
+0.35
+540
+0.31
+0.87
+
+Gas
+Red
+Nancy Green
+28 Connell St Malvern TAS
+16.80
+29
+13287
+13329
+39.70
+0.034
+0.46
+
+Phone
+Red
+John Young
+26 John St Hammond TAS
+16.00
+31
+241
+0.12
+246
+0.29
+0.32
+
+Elect
+AGL
+Jason Rao
+97 John St Horsham SA
+3.80
+30
+129140
+129605
+0.33
+515
+0.37
+0.94
+
+Phone
+Origin
+David Adams
+43 John St Osborne NT
+-20.87
+28
+306
+0.11
+256
+0.39
+0.33
+
+Elect
+Alinta
+James Evans
+80 Rose Ave Dutton SA
+5.18
+30
+126972
+127488
+0.39
+545
+0.40
+0.84
+
+Elect
+Dodo
+Karen Walker
+6 John St Hanwood NT
+0.04
+31
+103066
+103831
+0.25
+535
+0.25
+0.92
+
+Elect
+AGL
+Thomas Miller
+45 Peace Ave Malvern NT
+20.91
+30
+129903
+130594
+0.25
+525
+0.26
+0.84
+
+Gas
+Alinta
+Helen Hall
+64 Joy St Belford NT
+-15.05
+28
+14035
+14093
+38.60
+0.033
+0.67
+
+Phone
+Dodo
+Nancy Lewis
+46 Broke St Dutton WA
+-13.86
+30
+320
+0.07
+239
+0.24
+0.45
+
+Gas
+Alinta
+John Green
+78 Joy St Malvern VIC
+7.37
+29
+13950
+14004
+39.40
+0.033
+0.63
+
+Elect
+Dodo
+Joseph Baker
+8 Broke St Glossop VIC
+22.57
+31
+102361
+102800
+0.34
+540
+0.30
+0.97
+
+Elect
+EA
+Donald Lopez
+5 Peace Ave Sydney NSW
+-7.79
+29
+104269
+104880
+0.39
+525
+0.43
+0.83
+
+Gas
+Click
+Jill Wright
+91 Broke St  SA
+-18.24
+28
+13608
+13652
+39.00
+0.035
+0.56
+
+Phone
+Origin
+Daniel Walker
+24 Dingo St Croydon NT
+26.33
+30
+319
+0.05
+253
+0.26
+0.46
+
+Elect
+Dodo
+Brian King
+90 Rose Ave Sydney NT
+24.27
+30
+125580
+126242
+0.37
+525
+0.36
+0.99
+
+Elect
+EA
+Carol Jones
+74 John St Burnley TAS
+25.86
+30
+130110
+130672
+0.37
+500
+0.36
+0.87
+
+Elect
+Dodo
+Lisa Baker
+33 John St Horsham TAS
+-8.79
+30
+112018
+112811
+0.27
+535
+0.26
+0.92
+
+Gas
+AGL
+Daniel Crowe
+81 Peace Ave Dunwich NSW
+10.52
+28
+12665
+12705
+39.60
+0.035
+0.58
+
+Elect
+Dodo
+David Evans
+12 Joy St Osborne NT
+-19.28
+29
+114787
+115310
+0.25
+545
+0.24
+0.93
+
+Gas
+Click
+Tom Martin
+28 Rose Ave Milton QLD
+20.99
+30
+13826
+13873
+38.80
+0.038
+0.45
+
+Gas
+Origin
+Karen Lee
+87 Peace Ave Orford QLD
+-16.23
+28
+10327
+10401
+38.40
+0.032
+0.48
+
+Phone
+Red
+David Green
+35 Beach Rd Malvern NT
+-2.01
+31
+331
+0.06
+270
+0.37
+0.36
+
+Elect
+Alinta
+Sharon Nelson
+84 Connell St Malvern QLD
+-0.80
+29
+119101
+119508
+0.28
+500
+0.24
+0.81
+
+Phone
+Red
+Ruth Jones
+38 Peace Ave Malvern NSW
+20.99
+30
+235
+0.05
+208
+0.34
+0.49
+
+Phone
+Origin
+Donna Rao
+6 Willey Rd Malvern NSW
+-15.24
+30
+241
+0.14
+290
+0.23
+0.40
+
+Gas
+Click
+Donna Rao
+27 John St Windsor SA
+-5.07
+30
+10732
+10810
+39.50
+0.035
+0.61
+
+Elect
+Red
+Bill King
+84 Beach Rd Otford WA
+23.33
+29
+118753
+119398
+0.38
+540
+0.36
+0.99
+
+Elect
+Click
+Kevin Moore
+37 Peace Ave Barham TAS
+-9.72
+31
+118586
+119129
+0.35
+500
+0.32
+0.94
+
+Phone
+Origin
+James Green
+87 Joy St Malvern SA
+-2.13
+28
+364
+0.10
+265
+0.22
+0.35
+
+Elect
+Alinta
+Laura Wright
+80 Beach Rd Bexhill WA
+-20.06
+30
+111404
+112105
+0.36
+545
+0.37
+0.91
+
+Gas
+Origin
+Laura King
+58 Peace Ave Exeter TAS
+22.40
+31
+14501
+14565
+38.20
+0.031
+0.46
+
+Elect
+Origin
+Susan Black
+61 John St Orford NT
+-15.15
+28
+118976
+119740
+0.30
+535
+0.33
+0.83
+
+Elect
+EA
+Donald Wright
+16 Willey Rd Copley VIC
+4.79
+31
+107407
+107997
+0.27
+540
+0.31
+0.95
+
+Gas
+Alinta
+Lisa Thomas
+29 Rose Ave Dalton NT
+5.69
+28
+14163
+14204
+39.90
+0.039
+0.67
+
+Phone
+Origin
+James Black
+28 Broke St Bookham QLD
+-2.62
+29
+364
+0.13
+287
+0.32
+0.44
+
+Gas
+Origin
+Maria Scott
+24 Willey Rd Barham NT
+4.62
+31
+19168
+19227
+38.30
+0.033
+0.55
+
+Elect
+Origin
+Daniel Taylor
+80 Willey Rd Loxton TAS
+-13.70
+30
+108956
+109679
+0.32
+505
+0.28
+0.85
+
+Gas
+Alinta
+David Baker
+56 Broke St Dalton VIC
+25.75
+29
+14325
+14368
+38.70
+0.038
+0.62
+
+Elect
+Click
+Laura Young
+48 John St Clayton TAS
+-7.02
+30
+128800
+129548
+0.29
+520
+0.30
+0.91
+
+Elect
+Red
+Helen Crowe
+77 Willey Rd Penrose WA
+4.56
+29
+107475
+108051
+0.37
+540
+0.40
+0.85
+
+Elect
+Click
+Helen Miller
+89 Beach Rd Ipswich WA
+-7.74
+28
+120257
+120673
+0.29
+515
+0.28
+0.89
+
+Phone
+Alinta
+Karen Wright
+36 Joy St Kendall WA
+-16.72
+31
+345
+0.13
+224
+0.33
+0.46
+
+Phone
+Red
+Karen Smith
+62 Willey Rd Toronto QLD
+-7.05
+30
+279
+0.12
+246
+0.29
+0.45
+
+Phone
+Alinta
+Sharon Moore
+34 Joy St Malvern WA
+13.51
+30
+286
+0.10
+200
+0.38
+0.48
+
+Elect
+AGL
+Donald Thomas
+63 Joy St Redhill QLD
+4.54
+30
+105067
+105645
+0.29
+535
+0.34
+0.81
+
+Phone
+Origin
+Thomas Miller
+61 Broke St Bookham NSW
+26.59
+29
+235
+0.07
+279
+0.27
+0.32
+
+Elect
+Dodo
+Betty Jones
+29 Connell St Oxley NT
+22.60
+29
+109805
+110400
+0.36
+540
+0.33
+0.84
+
+Gas
+Dodo
+Jannet Lewis
+1 John St Oxley NSW
+24.25
+30
+14717
+14784
+39.80
+0.035
+0.62
+
+Phone
+Red
+James White
+6 Rose Ave Milton NSW
+8.27
+30
+394
+0.07
+237
+0.37
+0.49
+
+Elect
+Click
+Jeff Young
+94 John St Hamper NT
+0.78
+28
+126666
+127458
+0.27
+500
+0.26
+0.96
+
+Phone
+Click
+James Smith
+32 Broke St Glossop NT
+-9.16
+28
+390
+0.07
+278
+0.38
+0.34
+
+Phone
+Click
+Kevin Smith
+19 Peace Ave Otford WA
+-9.60
+28
+210
+0.05
+219
+0.21
+0.40
+
+Gas
+Dodo
+George Lee
+67 John St Horsham QLD
+18.88
+29
+10693
+10765
+39.00
+0.035
+0.68
+
+Gas
+Origin
+Maria Robert
+89 Rose Ave Bexhill NSW
+19.84
+31
+11648
+11710
+39.30
+0.033
+0.62
+
+Phone
+Alinta
+David Lee
+95 John St NewhamWinton TAS
+-3.44
+30
+307
+0.12
+201
+0.21
+0.45
+
+Phone
+Red
+Susan Willey
+44 Connell St Euston WA
+-21.66
+29
+350
+0.12
+254
+0.25
+0.49
+
+Gas
+Origin
+Paul Adams
+8 Peace Ave Barnes NSW
+-13.95
+31
+15678
+15755
+39.00
+0.033
+0.58
+
+Gas
+Alinta
+Steven Lewis
+41 Beach Rd Milton TAS
+-9.80
+30
+19929
+20002
+39.50
+0.039
+0.55
+
+Phone
+Origin
+Donna Walker
+89 Connell St Horsham TAS
+-19.25
+30
+213
+0.05
+213
+0.29
+0.30
+
+Elect
+Alinta
+Linda Hill
+43 John St Everton NSW
+20.69
+29
+128561
+129292
+0.25
+525
+0.24
+0.84
+
+Elect
+EA
+David Davis
+69 Willey Rd Sydney QLD
+11.13
+31
+130726
+131163
+0.33
+545
+0.35
+0.92
+
+Phone
+AGL
+Helen Adams
+34 Broke St Barham TAS
+-15.73
+30
+202
+0.12
+275
+0.20
+0.33
+
+Gas
+Red
+Susan Robert
+74 Beach Rd Osborne QLD
+24.49
+31
+12791
+12848
+39.10
+0.034
+0.52
+
+Elect
+Click
+Ruth Thomas
+69 Rose Ave Bookham WA
+-15.67
+29
+121223
+121848
+0.32
+525
+0.28
+0.87
+
+Phone
+Red
+Donald Brown
+60 Dingo St Copley WA
+-14.05
+31
+321
+0.11
+223
+0.36
+0.34
+
+Gas
+Click
+Jason Adams
+30 John St Toronto NSW
+1.15
+31
+16550
+16611
+38.90
+0.038
+0.52
+
+Gas
+EA
+Betty Brown
+97 Willey Rd Belford TAS
+21.88
+28
+14356
+14423
+39.30
+0.035
+0.66
+
+Gas
+Alinta
+Mary Wright
+36 Rose Ave Exeter QLD
+24.55
+31
+17563
+17608
+38.00
+0.034
+0.63
+
+Gas
+Alinta
+Sarah White
+23 Willey Rd Epping NT
+8.37
+29
+10624
+10668
+39.80
+0.035
+0.67
+
+Phone
+Red
+Jill Walker
+48 John St Dalton SA
+24.56
+30
+225
+0.10
+233
+0.38
+0.38
+
+Phone
+Red
+Jill Brown
+25 Peace Ave Horsham NT
+-8.61
+29
+346
+0.05
+213
+0.25
+0.40
+
+Gas
+Dodo
+Robert Garcia
+44 Beach Rd Malvern SA
+17.53
+30
+10279
+10358
+38.90
+0.034
+0.65
+
+Phone
+EA
+Paul Willey
+23 Beach Rd Barham QLD
+-6.08
+29
+370
+0.06
+214
+0.28
+0.32
+
+Elect
+EA
+Susan Davis
+72 Willey Rd Windsor QLD
+-18.05
+29
+109940
+110542
+0.36
+520
+0.33
+0.90
+
+Gas
+Origin
+Edward Miller
+97 Rose Ave Ipswich TAS
+-1.45
+28
+10162
+10214
+38.40
+0.039
+0.52
+
+Gas
+Red
+Maria White
+42 Rose Ave Dalby NSW
+-16.62
+31
+10623
+10669
+38.90
+0.033
+0.52
+
+Gas
+Origin
+Edward Scott
+14 Joy St Clifton NSW
+-2.89
+30
+15689
+15741
+38.50
+0.032
+0.58
+
+Gas
+Dodo
+Karen Garcia
+17 Rose Ave Exeter NT
+1.73
+31
+11668
+11719
+39.30
+0.032
+0.62
+
+Phone
+Click
+Bill Nelson
+77 John St Belford VIC
+15.28
+31
+311
+0.13
+282
+0.34
+0.30
+
+Phone
+Origin
+Karen Young
+62 John St Heywood SA
+-16.61
+29
+391
+0.10
+297
+0.38
+0.41
+
+Phone
+Red
+Daniel Evans
+9 Connell St Penrose WA
+-19.74
+30
+349
+0.10
+227
+0.25
+0.39
+
+Elect
+EA
+Jill Turner
+21 Broke St Dalton QLD
+-19.14
+29
+101587
+102196
+0.26
+545
+0.30
+0.99
+
+Gas
+Dodo
+George Miller
+83 Broke St Grafton TAS
+9.96
+29
+13419
+13485
+38.00
+0.036
+0.59
+
+Phone
+EA
+Sharon Smith
+10 Broke St Barham NT
+2.46
+29
+322
+0.10
+276
+0.25
+0.37
+
+Elect
+EA
+Donna Lee
+50 Willey Rd Malvern NT
+-6.18
+28
+100277
+100728
+0.28
+500
+0.28
+0.95
+
+Gas
+Click
+Karen Clark
+33 Dingo St Orford TAS
+19.25
+28
+18224
+18284
+38.90
+0.033
+0.67
+
+Elect
+Dodo
+Jill Turner
+4 Dingo St Kendall WA
+-8.62
+31
+109898
+110676
+0.29
+505
+0.31
+0.84
+
