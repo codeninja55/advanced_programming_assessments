@@ -27,13 +27,13 @@ accounts of a meter reading and billing company. Meter reading information on el
 phone usage is contained in the file "usage.txt". Each record begins with the service type (i.e. elect,
 gas or phone) followed with customer details:
 
-![BillingRecord table](./img/1.png)
+![BillingRecord table](./img/1.PNG)
 
 
 
 ... and other usage information which depend on the service type:
 
-![Other usage information](./img/2.png)
+![Other usage information](./img/2.PNG)
 
 This information is used to calculate the customer’s next bill. The processing of the billing records is complicated because some suppliers offer their customers discounts if they subscribe to more than one service from them. To solve this problem you are to use object oriented programming with inheritance to represent the different types of billing records. Polymorphism will also be used to allow all records to be processed efficiently in the one array.
 
@@ -58,7 +58,7 @@ overridden to handle the different types of data in the derived classes.
 
 For step 1, get the `BillRecord` base class working. Examine the incomplete code in the provided files and complete the function definitions of class `BillRecord` and `BillSystem` so that the customer details (only) are read into each `BillRecord` of the vector `BRecs` from “usage.txt”. Then test that main() displays the first 10 customer details on the screen, as shown below. Note: don’t forget to delete the pointers in vector `BRecs` in the `BillSystem` destructor.
 
-![Data](./img/3.png)
+![Data](./img/3.PNG)
 
 
 
@@ -72,7 +72,7 @@ Now provide the derived classes with their versions of functions: `ReadUsageInfo
 
 Modify `ReadFile()` in BillSystem.cpp so that it reads the service type and then allocates a `ElectBillRecord`, `GasBillRecord` or `PhoneBillrecord` accordingly using the new operator. Then call their `ReadCustDetails()` and `ReadUsageInfo()` functions to have the data in the file read appropriately. You might have to work on the code in each `ReadUsageInfo()` function to get each derived class reading its file data correctly. When you complete this step run the `main()` again to display 5 records showing the Customer and usage info on the screen something like this:
 
-![Example output of step-2](./img/3.png)
+![Example output of step-2](./img/3.PNG)
 
 
 
@@ -88,7 +88,7 @@ One suggestion for finding the discounted records is to use a multiset with a us
 
 Add two more public member functions to the `BillSystem` class named `CallBills()` and `PrintReport()`. Also add a public pure virtual function: `UpdateBalance()` in the `BillRecord` class and override this in the derived classes. `UpdateBalance()` should calculate the `BillAmount` and add this to the `AccountBalance`. The `BillAmount` is calculated as follows:
 
-![Output for step 5](./img/5.png)
+![Output for step 5](./img/5.PNG)
 
 `PrintReport()` should print the first 5 records similar to Step-1 with the `AccBal` and `Days` replaced with `BillAmt`. Also, print the names and addresses of all Dodo and Alinta customers who have discounts.
 
