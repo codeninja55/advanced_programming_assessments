@@ -1,9 +1,10 @@
 /**********************************************************************
  * BillSystem.cpp - CSCI251/851 - Ass4 - BillSystem class definition
- * <Your name> <your login> <date last modified>
+ * Dinh Che dbac496 21.05.2018
  **********************************************************************/
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include "BillSystem.h"
 using namespace std;
 
@@ -14,21 +15,35 @@ using namespace std;
 BillSystem::~BillSystem()
 {
 	//Iterate BRecs vector and delete each ptr
+	for(int i=0; i < BRecs.size(); i++) { delete BRecs[i]; }
 }
 
 // Reads data in "usage.txt" into BRecs vector
 bool BillSystem::ReadFile(char *fname)
 {
+    // open fname
+    ifstream fin;
+    fin.open(fname);
+    // if not found display: "File not found." and return 0
+    if(!fin.good()) return false;
 
-	// open fname
-	// if not found display: "File not found." and return 0
-	// while not eof
-		// allocate new memory to a temp BillRecord
-		// if(!temp.ReadCustDetails(fin))break;
-		// if(!temp.ReadUsageInfo(fin))break;
-		// add temp to back of BRecs vector
-	// close file
-	 return true;
+    while(!fin.eof()) {
+        string bill_type; BillRecord *tmp;
+        fin>>bill_type; // read BillType
+        if(fin.fail()) break;
+        //tmp = new BillRecord();
+
+        if(bill_type.compare("Elect")==0) tmp = new ElectBillRecord();
+        else if(bill_type.compare("Gas")==0) tmp = new GasBillRecord();
+        else tmp = new PhoneBillRecord();
+
+        tmp->ReadCustDetails(fin);
+        tmp->ReadUsageInfo(fin);   // polymorphic call to overloaded fn
+        BRecs.push_back(tmp);
+    }
+
+	fin.close();
+    return true;
 }
 
 // Returns the number of records in BRecs
@@ -40,7 +55,7 @@ int BillSystem::GetNumRecs()
  // Displays ith record on screen
 void BillSystem::DisplayRec(int i)
 {
-	BRecs[i]->DisplayCustDetails();
+	BRecs[i]->DisplayCustDetails(i);
 	BRecs[i]->DisplayUsageInfo();
 	cout<<endl;
 }
