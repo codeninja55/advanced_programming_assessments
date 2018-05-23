@@ -11,9 +11,6 @@ using namespace std;
 
 // ========== class BillRecord function definitions ==========
 
-// Default constructor
-BillRecord::BillRecord() { }
-
 // Reads customer details part of record from file
 bool BillRecord::ReadCustDetails(ifstream &fin)
 {
@@ -39,18 +36,17 @@ void BillRecord::DisplayCustDetails(int i)
 }
 
 // Virtual fn for reading usage info part of record from file in derived classes
-bool BillRecord::ReadUsageInfo(ifstream &fin)
-{
-	//the code here should just test BillType and read (eat)
-    // the usage info from file and discard it
-	// later we will override this fn to read usage info into
-    // the appropriate derived classes private data members
-    return true;
-}
+bool BillRecord::ReadUsageInfo(ifstream &fin) { }
 
 // virtual fn for displays usage info part of record in derived classes
 void BillRecord::DisplayUsageInfo() { }
 
+// Accessor functions for private data
+string BillRecord::GetSupplier() { return Supplier; }
+string BillRecord::GetName() { return Name; }
+string BillRecord::GetAddress() { return Address; }
+
+void BillRecord::SetDiscount(float discount) { Discount = discount; }
 
 /******************** PhoneBillRecord FUNCTION DEFINITIONS ********************/
 bool ElectBillRecord::ReadUsageInfo(ifstream &fin)

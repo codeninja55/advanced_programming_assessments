@@ -36,7 +36,7 @@ int main(){
 		cout << endl;
 	}
 	
-	//BS.CalDiscounts(); // uncoment when step 3 complete
+	BS.CalcDiscounts(); // uncoment when step 3 complete
 	
 	//BS.CalBills();     // uncoment when step 4 complete
 	//BS.PrintReport();  // uncoment when step 4 complete

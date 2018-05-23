@@ -15,17 +15,23 @@ enum BillType {eElect, eGas, ePhone};
 class BillRecord {
 
     public:
-		BillRecord();
+		BillRecord() : Discount(1) { }; // Default constructor
 		bool ReadCustDetails(ifstream &fin);
 		void DisplayCustDetails(int);
+		string GetSupplier();
+		string GetName();
+		string GetAddress();
+		void SetDiscount(float);
         virtual bool ReadUsageInfo(ifstream &fin) = 0;
-        virtual void DisplayUsageInfo();
+        virtual void DisplayUsageInfo() = 0;
+        virtual void UpdateBalance() = 0;
     private:
         string Supplier; // Supplier's name
         string Name, Address; // Customer's name and address
         double BillAmount;// Amount in dollars and cents of this bill
     protected:
         BillType BType;
+        float Discount;
         int DaysSinceLastReading; // Days since last reading
         double AccountBalance; // Customer's account balance
 };

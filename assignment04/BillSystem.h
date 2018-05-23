@@ -18,6 +18,9 @@ class BillSystem {
         bool ReadFile(char *fname);
         int GetNumRecs();
         void DisplayRec(int i); // prints ith record on screen
+        void CalcDiscounts(); // Calculate discount
+        void CalcBills();  // Calculate the bill
+        void PrintReport();  // Print a report
     private:
         vector<BillRecord*> BRecs; // vector of pointers to class BillRecord
 };

@@ -5,6 +5,9 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <iterator>
+#include <algorithm>
+#include <map>
 #include "BillSystem.h"
 using namespace std;
 
@@ -58,6 +61,27 @@ void BillSystem::DisplayRec(int i)
 	BRecs[i]->DisplayCustDetails(i);
 	BRecs[i]->DisplayUsageInfo();
 	cout<<endl;
+}
+
+// Calculate the discount for Dodo and Alinta Records
+void BillSystem::CalcDiscounts()
+{
+    multimap<string, BillRecord*> bill_records_map;
+    multimap<string, BillRecord*>::iterator bill_records_iter;
+    for(int i=0; i<BRecs.size(); i++) {
+        string tmp, address;
+        tmp = BRecs[i]->GetSupplier() + BRecs[i]->GetName() + BRecs[i]->GetAddress();
+        bill_records_map.insert(pair<string, BillRecord*>(tmp, BRecs[i]));
+    }
+    for(bill_records_iter= bill_records_map.begin(); bill_records_iter != bill_records_map.end(); ++bill_records_iter) {
+        // Count how many times a (supplier, name, address) key appears in multimap
+        int count = bill_records_map.count((*bill_records_iter).first);
+        if(count==3) {
+            BillRecord* tmp_ptr = (*bill_records_iter).second;
+            if(tmp_ptr->GetSupplier().compare("Dodo")==0) tmp_ptr->SetDiscount(0.75);
+            else if(tmp_ptr->GetSupplier().compare("Alinta")==0) tmp_ptr->SetDiscount(0.8);
+        }
+    }
 }
 
 // ========== class BillSystem Private Function definitions ==========
