@@ -24,7 +24,8 @@ class BillSystem {
         void PrintReport();  // Print a report
     private:
         vector<BillRecord*> BRecs; // vector of pointers to class BillRecord
-        multimap<string, BillRecord*> bill_records_map;
+        multimap<string, BillRecord*> bill_records_map; // multimap of all customer keys, pointers
+        map<string, string> discounted_cust;  // map of customers with discounts only
 };
 
 #endif

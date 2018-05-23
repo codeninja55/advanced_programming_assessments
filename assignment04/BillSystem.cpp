@@ -73,6 +73,7 @@ void BillSystem::CalcDiscounts()
             BillRecord* tmp_ptr = (*bill_records_iter).second;
             if(tmp_ptr->GetSupplier().compare("Dodo")==0) tmp_ptr->SetDiscount(0.85);
             else if(tmp_ptr->GetSupplier().compare("Alinta")==0) tmp_ptr->SetDiscount(0.8);
+            discounted_cust.insert(pair<string, string>(tmp_ptr->GetName(), tmp_ptr->GetSupplier()));
         }
     }
 }
@@ -98,15 +99,6 @@ void BillSystem::PrintReport()
 
     // Discounted customers
     cout<<left<<setw(24)<<"Discounted Customers"<<setw(10)<<"Supplier"<<endl;
-    multimap<string, BillRecord*>::iterator disc_cust_iter = bill_records_map.begin();
-    map<string, string> discounted_cust;
-
-    for(disc_cust_iter; disc_cust_iter!=bill_records_map.end(); ++disc_cust_iter) {
-        if (bill_records_map.count((*disc_cust_iter).first)==3) {
-            discounted_cust.insert(pair<string, string>((*disc_cust_iter).second->GetName(), (*disc_cust_iter).second->GetSupplier()));
-        }
-    }
-
     map<string, string>::iterator iter = discounted_cust.begin();
     for(iter;iter!=discounted_cust.end();iter++) cout<<setw(24)<<(*iter).first<<setw(10)<<(*iter).second<<endl;
 }

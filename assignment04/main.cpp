@@ -12,7 +12,6 @@ using namespace std;
 char Menu();
 
 int main(){
-
     char fname[128];
 	BillSystem BS;
 
@@ -33,8 +32,8 @@ int main(){
 
 	for(int i=0; i<n && i<10; i++){
 		BS.DisplayRec(i);
-		cout << endl;
 	}
+    cout << endl;
 	
 	BS.CalcDiscounts(); // uncoment when step 3 complete
 	

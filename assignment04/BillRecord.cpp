@@ -14,7 +14,6 @@ using namespace std;
 // Reads customer details part of record from file
 bool BillRecord::ReadCustDetails(ifstream &fin)
 {
-	// Put code here for reading the customer details part of file record only into the private data members
     fin>>Supplier;
     fin.ignore(2, '\n');
     getline(fin, Name,'\n');
@@ -77,8 +76,6 @@ void ElectBillRecord::UpdateBalance()
     BillAmount = (c<=rate_1_threshold) ?
                     (c*rate_1+p)*Discount - AccountBalance :
                     (rate_1_threshold*rate_1+(c-rate_1_threshold)*rate_2+p) * Discount - AccountBalance;
-    //if(c<=rate_1_threshold) BillAmount = (c * rate_1 + p) * Discount - AccountBalance;
-    //else BillAmount = (rate_1_threshold * rate_1 + (c - rate_1_threshold) * rate_2 + p) * Discount - AccountBalance;
 }
 
 /******************** GasBillRecord FUNC DEFINITIONS ********************/
