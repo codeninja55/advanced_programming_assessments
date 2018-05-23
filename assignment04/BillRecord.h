@@ -1,6 +1,6 @@
 /**********************************************************************
  * BillRecord.h - CSCI251/851 - Ass4 - BillRecord class declaration
- * Dinh Che dbac496 21.05.2018
+ * Dinh Che dbac496 23.05.2018
  **********************************************************************/
 #ifndef BILLRECORD_H
 #define BILLRECORD_H
@@ -21,6 +21,9 @@ class BillRecord {
 		string GetSupplier();
 		string GetName();
 		string GetAddress();
+		float GetDiscount();
+		float GetBillAmount();
+        string BillTypeString();
 		void SetDiscount(float);
         virtual bool ReadUsageInfo(ifstream &fin) = 0;
         virtual void DisplayUsageInfo() = 0;
@@ -28,9 +31,9 @@ class BillRecord {
     private:
         string Supplier; // Supplier's name
         string Name, Address; // Customer's name and address
-        double BillAmount;// Amount in dollars and cents of this bill
     protected:
         BillType BType;
+        float BillAmount;// Amount in dollars and cents of this bill
         float Discount;
         int DaysSinceLastReading; // Days since last reading
         double AccountBalance; // Customer's account balance
@@ -44,10 +47,10 @@ class ElectBillRecord : public BillRecord {
         ElectBillRecord() { BType=eElect; };
         bool ReadUsageInfo(ifstream &fin);
         void DisplayUsageInfo();
+        void UpdateBalance();
     private:
         float previous_reading, current_reading;
-        double rate_1, rate_1_threshold;
-        double rate_2, rate_2_threshold;
+        double rate_1, rate_1_threshold, rate_2;
         double supply_charge;
 };
 
@@ -57,6 +60,7 @@ class PhoneBillRecord : public BillRecord {
         PhoneBillRecord() { BType=ePhone; };
         bool ReadUsageInfo(ifstream &fin);
         void DisplayUsageInfo();
+        void UpdateBalance();
     private:
         double local_calls_num;
         float local_call_rate;
@@ -71,6 +75,7 @@ class GasBillRecord : public BillRecord {
         GasBillRecord() { BType=eGas; };
         bool ReadUsageInfo(ifstream &fin);
         void DisplayUsageInfo();
+        void UpdateBalance();
     private:
         float previous_reading, current_reading;
         double heating_value;

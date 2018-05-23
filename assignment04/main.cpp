@@ -27,19 +27,19 @@ int main(){
     int n = BS.GetNumRecs();
     cout << "Num records read: " << n << endl << endl;
 
-    cout<<right<<setw(3)<<"# "
-        <<left<<setw(8)<<"Service"<<setw(20)<<"Customer"<<setw(30)<<"Address"
-        <<right<<setw(10)<<"AccBal"<<setw(10)<<"Days"<<endl<<endl;
+    cout<<right<<setw(3)<<"# "<<left<<setw(14)<<"Service"<<setw(10)<<"Supplier";
+    cout<<setw(20)<<"Customer"<<setw(30)<<"Address";
+    cout<<right<<setw(10)<<"AccBal"<<setw(10)<<"Days"<<endl<<endl;
 
-	for(int i=0; i<n && i<5; i++){
+	for(int i=0; i<n && i<10; i++){
 		BS.DisplayRec(i);
 		cout << endl;
 	}
 	
 	BS.CalcDiscounts(); // uncoment when step 3 complete
 	
-	//BS.CalBills();     // uncoment when step 4 complete
-	//BS.PrintReport();  // uncoment when step 4 complete
+	BS.CalcBills();     // uncoment when step 4 complete
+	BS.PrintReport();  // uncoment when step 4 complete
 
 	cout << endl << "End tests for BillSystem\n";
 

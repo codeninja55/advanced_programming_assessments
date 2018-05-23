@@ -1,12 +1,13 @@
 /**********************************************************************
  * BillSystem.h - CSCI251/851 - Ass4- BillSystem class declaration
- * Dinh Che dbac496 21.05.2018
+ * Dinh Che dbac496 23.05.2018
  **********************************************************************/
 #ifndef BILLSYS_H
 #define BILLSYS_H
 
 #include <iostream>
 #include <vector>
+#include <map>
 #include "BillRecord.h"
 using namespace std;
 
@@ -23,6 +24,7 @@ class BillSystem {
         void PrintReport();  // Print a report
     private:
         vector<BillRecord*> BRecs; // vector of pointers to class BillRecord
+        multimap<string, BillRecord*> bill_records_map;
 };
 
 #endif
