@@ -34,7 +34,7 @@ int main(){
 		BS.DisplayRec(i);
 	}
     cout << endl;
-	
+
 	BS.CalcDiscounts(); // uncoment when step 3 complete
 	
 	BS.CalcBills();     // uncoment when step 4 complete
