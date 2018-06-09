@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <set>
 #include <map>
+#include <typeinfo>
 #include "BillSystem.h"
 using namespace std;
 
@@ -80,7 +81,7 @@ void BillSystem::CalcDiscounts()
 
 void BillSystem::CalcBills()
 {
-    for(int i=0; i<BRecs.size(); i++) { BRecs[i]->UpdateBalance(); }
+    for(int i=0; i<BRecs.size(); i++) BRecs[i]->UpdateBalance();
 }
 
 void BillSystem::PrintReport()

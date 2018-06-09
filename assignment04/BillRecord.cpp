@@ -6,6 +6,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <iomanip>
+#include <typeinfo>
 #include "BillRecord.h"
 using namespace std;
 
@@ -46,11 +47,16 @@ float BillRecord::GetBillAmount() { return BillAmount; }
 
 string BillRecord::BillTypeString()
 {
-    switch (BType) {
+    /*switch (BType) {
         case eGas: return "Gas";
         case eElect: return "Electricity";
         case ePhone: return "Phone";
-    }
+    }*/
+    // Refactored to use typeid() to check for type dynamically
+    if(typeid(*this) == typeid(GasBillRecord)) return "Gas";
+    else if(typeid(*this) == typeid(ElectBillRecord)) return "Elect";
+    else if(typeid(*this) == typeid(PhoneBillRecord)) return "Phone";
+    else return "Unknown Type";
 }
 
 void BillRecord::SetDiscount(float discount) { Discount = discount; }

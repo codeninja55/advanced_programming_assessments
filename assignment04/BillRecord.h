@@ -8,7 +8,8 @@
 #include <string>
 using namespace std;
 
-enum BillType {eElect, eGas, ePhone};
+// Unnecessary now because using typeid for check
+//enum BillType {eElect, eGas, ePhone};
 
 // base class...
 
@@ -32,7 +33,6 @@ class BillRecord {
         string Supplier; // Supplier's name
         string Name, Address; // Customer's name and address
     protected:
-        BillType BType;
         float BillAmount;// Amount in dollars and cents of this bill
         float Discount;
         int DaysSinceLastReading; // Days since last reading
@@ -44,7 +44,6 @@ class BillRecord {
 class ElectBillRecord : public BillRecord {
 
     public:
-        ElectBillRecord() { BType=eElect; };
         bool ReadUsageInfo(ifstream &fin);
         void DisplayUsageInfo();
         void UpdateBalance();
@@ -57,7 +56,6 @@ class ElectBillRecord : public BillRecord {
 class PhoneBillRecord : public BillRecord {
 
     public:
-        PhoneBillRecord() { BType=ePhone; };
         bool ReadUsageInfo(ifstream &fin);
         void DisplayUsageInfo();
         void UpdateBalance();
@@ -72,7 +70,6 @@ class PhoneBillRecord : public BillRecord {
 class GasBillRecord : public BillRecord {
 
     public:
-        GasBillRecord() { BType=eGas; };
         bool ReadUsageInfo(ifstream &fin);
         void DisplayUsageInfo();
         void UpdateBalance();

@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <cstring>
 #include <iomanip>
+#include <typeinfo>
 #include "BillSystem.h"
 using namespace std;
 
@@ -14,6 +15,7 @@ char Menu();
 int main(){
     char fname[128];
 	BillSystem BS;
+//	BillSystem* BS_ptr = &BS;
 
     cout << "Begin tests for BillSystem\n\n";
 
@@ -30,9 +32,7 @@ int main(){
     cout<<setw(20)<<"Customer"<<setw(30)<<"Address";
     cout<<right<<setw(10)<<"AccBal"<<setw(10)<<"Days"<<endl<<endl;
 
-	for(int i=0; i<n && i<10; i++){
-		BS.DisplayRec(i);
-	}
+	for(int i=0; i<n && i<10; i++) BS.DisplayRec(i);
     cout << endl;
 
 	BS.CalcDiscounts(); // uncoment when step 3 complete
@@ -41,6 +41,11 @@ int main(){
 	BS.PrintReport();  // uncoment when step 4 complete
 
 	cout << endl << "End tests for BillSystem\n";
+
+//	cout<<endl<<"RTTI Tests"<<endl;
+//    if(typeid(*BS_ptr) == typeid(BillSystem)) cout<<"True"<<endl;
+//    if(typeid(BS_ptr) == typeid(BillSystem*)) cout<<"True"<<endl;
+//    cout<<sizeof(BS_ptr)<<endl;
 
 	return 0;
 }
